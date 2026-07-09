@@ -1,0 +1,4 @@
+scenario,free_episode_cost_usd_A02b,cac_usd_A28,breakeven_conversion_rate_pct
+low,2.0,250.0,0.8
+base,8.0,250.0,3.2
+high,25.0,250.0,10.0

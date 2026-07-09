@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>How I answered the assignment — Legion Health</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#3A68E9;--primary-light:#f0f1ff;--secondary:#32D583;--tertiary:#FE8D61;
+  --sky:#6FD8FA;--sky-light:#e8f7fa;--tertiary-light:#fff5ed;--secondary-light:#edf8f3;
+  --ink:#111827;--muted:#4b5563;--muted-light:#6b7280;--border:#e5e7eb;
+  --bg:#ffffff;--bg-soft:#f8fafc;--success:#15803d;
+  --font:'Inter',ui-sans-serif,system-ui,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --radius-lg:12px;--shadow-sm:0 1px 2px rgb(0 0 0/.05);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);color:var(--ink);background:var(--bg-soft);-webkit-font-smoothing:antialiased;line-height:1.5}
+.hero{background:linear-gradient(135deg,var(--primary) 0%,#6a8cff 100%);color:#fff;padding:32px 28px 36px}
+.hero-inner{max-width:1400px;margin:0 auto}
+.hero-top{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand svg{width:36px;height:auto}
+.brand span{font-size:13px;font-weight:600;opacity:.92}
+.hero h1{font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.02em}
+.hero p{font-size:14px;opacity:.9;max-width:920px;margin-top:8px;line-height:1.55}
+.panel{max-width:1400px;margin:0 auto;padding:20px 28px 0}
+.legend{display:flex;flex-wrap:wrap;gap:12px 18px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-lg);padding:14px 18px;box-shadow:var(--shadow-sm)}
+.legend span{display:inline-flex;align-items:center;gap:7px;font-size:12px;color:var(--muted)}
+.swatch{width:14px;height:14px;border-radius:4px;border:1px solid rgb(0 0 0/.08)}
+.swatch.start{background:var(--tertiary-light);border-color:var(--tertiary);border-radius:99px}
+.swatch.src{background:var(--sky-light);border-color:var(--sky);border-radius:50%/35%}
+.swatch.step{background:var(--primary-light);border-color:var(--primary)}
+.swatch.gate{background:var(--bg-soft);border-color:var(--border);transform:rotate(45deg);width:11px;height:11px}
+.legend .yes{color:var(--success);font-weight:600}
+.legend .dash{border-bottom:2px dashed var(--tertiary);padding-bottom:1px}
+.canvas-wrap{overflow-x:auto;padding:24px 28px 36px;-webkit-overflow-scrolling:touch}
+.canvas-wrap svg{display:block;min-width:1200px}
+.foot{max-width:1400px;margin:0 auto;padding:0 28px 36px;font-size:12px;color:var(--muted-light)}
+.foot code{font-family:var(--mono);font-size:11px;background:var(--bg);border:1px solid var(--border);padding:2px 7px;border-radius:5px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-top">
+      <div class="brand">
+        <svg viewBox="0 0 617.68 523.87" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#fff" d="M265.57,260.72c-11.54-11.49-17.87-26.83-17.87-43.19s6.33-31.7,17.87-43.24l44.31-41.97,42.12,41.97c11.54,11.54,17.87,26.88,17.87,43.24s-6.33,31.7-17.87,43.19c-11.54,11.54-26.88,17.87-43.19,17.87s-31.7-6.33-43.24-17.87M401.43,310.15c51.04-51.08,51.04-134.21,0-185.24l-39.64-39.63c48.41-26.64,109.47-18.46,149.25,21.27,23.72,23.77,36.77,55.32,36.77,88.87s-13.05,65.06-36.77,88.72l-149.98,149.93c-28.88,28.83-75.82,28.83-104.65-.05l-149.89-149.83c-48.94-48.94-48.94-128.65,0-177.65,23.72-23.67,55.22-36.71,88.77-36.71,21.43,0,42.17,5.36,60.58,15.53l-39.69,39.54c-51.08,51.04-51.08,134.16,0,185.24,24.68,24.69,57.6,38.27,92.62,38.27s67.88-13.58,92.62-38.27"/></svg>
+        <span>Legion Health · Take-home</span>
+      </div>
+    </div>
+    <h1>How I answered the assignment</h1>
+    <p>Each purple box is an analytical step. Yellow shapes are external inputs I pulled in. Grey diamonds are go/no-go checks on the logic. The path reads left to right: comparable models → sector economics → Legion inputs → model → scale and trust → test design → recommendation.</p>
+  </div>
+</header>
+
+<div class="panel">
+  <div class="legend">
+    <span><i class="swatch start"></i> Start / prompt</span>
+    <span><i class="swatch src"></i> External input</span>
+    <span><i class="swatch step"></i> Analysis step</span>
+    <span><i class="swatch gate"></i> Logic check</span>
+    <span class="yes">Yes / proceed</span>
+    <span class="dash">Get info</span>
+  </div>
+</div>
+
+<div class="canvas-wrap">
+<svg viewBox="0 0 3000 1540" width="3000" height="1540" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#9ca3af"/>
+    </marker>
+    <filter id="sh" x="-6%" y="-6%" width="112%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity=".07"/>
+    </filter>
+    <style>
+      text{font-family:Inter,ui-sans-serif,sans-serif}
+      .lane{font-family:ui-monospace,Menlo,monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;fill:#6b7280;font-weight:600}
+      .t-title{font-size:12px;font-weight:700;fill:#111827}
+      .t-sub{font-size:10px;fill:#4b5563}
+      .t-yes{font-size:10px;fill:#15803d;font-weight:700}
+      .t-get{font-size:9px;fill:#d96b35;font-weight:600}
+      .t-branch{font-size:9px;fill:#6b7280}
+    </style>
+  </defs>
+
+  <!-- swimlanes: 210px each -->
+  <rect x="0" y="70"  width="3000" height="210" fill="#f0f1ff" opacity=".32"/>
+  <rect x="0" y="290" width="3000" height="210" fill="#e8f7fa" opacity=".32"/>
+  <rect x="0" y="510" width="3000" height="210" fill="#fff5ed" opacity=".32"/>
+  <rect x="0" y="730" width="3000" height="210" fill="#edf8f3" opacity=".32"/>
+  <rect x="0" y="950" width="3000" height="210" fill="#f0f1ff" opacity=".32"/>
+  <rect x="0" y="1170" width="3000" height="210" fill="#e8f7fa" opacity=".32"/>
+  <rect x="0" y="1390" width="3000" height="150" fill="#3A68E9" opacity=".05"/>
+
+  <text class="lane" x="36" y="108">Comparable models</text>
+  <text class="lane" x="36" y="328">Sector economics</text>
+  <text class="lane" x="36" y="548">Regulatory</text>
+  <text class="lane" x="36" y="768">Legion inputs</text>
+  <text class="lane" x="36" y="988">Model + decision</text>
+  <text class="lane" x="36" y="1208">Validation</text>
+
+  <!-- helper: source cylinder centered at (cx, topY+19), box top = topY+67 -->
+  <!-- LANE 1 y band: sources 120-158, boxes 200-276 -->
+
+  <!-- START + FRAME + DIAMOND on regulatory spine y=600 -->
+  <rect x="56" y="576" width="138" height="48" rx="24" fill="#fff5ed" stroke="#FE8D61" stroke-width="1.5" filter="url(#sh)"/>
+  <text class="t-title" x="125" y="598" text-anchor="middle">Assignment</text>
+  <text class="t-sub" x="125" y="614" text-anchor="middle">prompt received</text>
+  <line x1="194" y1="600" x2="234" y2="600" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="236" y="566" width="178" height="68" rx="8" fill="#f0f1ff" stroke="#3A68E9" stroke-width="1.5" filter="url(#sh)"/>
+  <text class="t-title" x="325" y="590" text-anchor="middle">Frame the question</text>
+  <text class="t-sub" x="325" y="606" text-anchor="middle">Can ads or sponsors fund</text>
+  <text class="t-sub" x="325" y="620" text-anchor="middle">free uninsured care?</text>
+  <line x1="414" y1="600" x2="454" y2="600" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <polygon points="494,600 534,570 574,600 534,630" fill="#f8fafc" stroke="#d1d5db" stroke-width="1.5"/>
+  <text class="t-title" x="534" y="596" text-anchor="middle" font-size="10">Need</text>
+  <text class="t-title" x="534" y="610" text-anchor="middle" font-size="10">comparables?</text>
+
+  <!-- ===== LANE 1 ===== -->
+  <path d="M 554 572 L 580 572 L 580 238 L 640 238" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text class="t-yes" x="588" y="400">Yes</text>
+
+  <!-- Lotus source (well above box) -->
+  <ellipse cx="680" cy="128" rx="76" ry="17" fill="#e8f7fa" stroke="#6FD8FA" stroke-width="1.5"/>
+  <rect x="604" y="128" width="152" height="34" fill="#e8f7fa"/>
+  <ellipse cx="680" cy="162" rx="76" ry="17" fill="#e8f7fa" stroke="#6FD8FA" stroke-width="1.5"/>
+  <text class="t-title" x="680" y="150" text-anchor="middle" font-size="11">Lotus + press</text>
+
+  <rect x="570" y="200" width="220" height="76" rx="8" fill="#f0f1ff" stroke="#3A68E9" stroke-width="1.5" filter="url(#sh)"/>
+  <text class="t-title" x="680" y="226" text-anchor="middle">Map comparable</text>
+  <text class="t-title" x="680" y="242" text-anchor="middle">business models</text>
+  <text class="t-sub" x="680" y="262" text-anchor="middle">Lotus AI · OpenEvidence</text>
+  <line x1="680" y1="162" x2="680" y2="200" stroke="#FE8D61" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text class="t-get" x="694" y="184">Get info</text>
+
+  <!-- OpenEvidence source (separate column, right of first step) -->
+  <ellipse cx="920" cy="128" rx="72" ry="17" fill="#e8f7fa" stroke="#6FD8FA" stroke-width="1.5"/>
+  <rect x="848" y="128" width="144" height="34" fill="#e8f7fa"/>
+  <ellipse cx="920" cy="162" rx="72" ry="17" fill="#e8f7fa" stroke="#6FD8FA" stroke-width="1.5"/>
+  <text class="t-title" x="920" y="150" text-anchor="middle" font-size="11">OpenEvidence</text>
+  <line x1="880" y1="162" x2="790" y2="218" stroke="#FE8D61" stroke-width="1.5" stroke-dasharray="5 4"/>
+
+  <line x1="790" y1="238" x2="850" y2="238" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="852" y="200" width="200" height="76" rx="8" fill="#f0f1ff" stroke="#3A68E9" stroke-width="1.5" filter="url(#sh)"/>
+  <text class="t-title" x="952" y="226" text-anchor="middle">Output: what transfers</text>
+  <text class="t-sub" x="952" y="246" text-anchor="middle">Physician CPMs ≠ patient CPMs</text>
+  <text class="t-sub" x="952" y="262" text-anchor="middle">Sponsorship ≠ proven at scale</text>
+
+  <!-- ===== LANE 2 ===== -->
+  <path d="M 554 615 L 580 615 L 580 458 L 600 458" fill="none" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text class="t-yes" x="588" y="530">Yes</text>
+
+  <ellipse cx="730" cy="348" rx="82" ry="17" fill="#e8f7fa" stroke="#6FD8FA" stroke-width="1.5"/>
+  <rect x="648" y="348" width="164" height="34" fill="#e8f7fa"/>
+  <ellipse cx="730" cy="382" rx="82" ry="17" fill="#e8f7fa" stroke="#6FD8FA" stroke-width="1.5"/>
+  <text class="t-title" x="730" y="370" text-anchor="middle" font-size="11">Sector comparables</text>
+
+  <rect x="600" y="420" width="260" height="76" rx="8" fill="#f0f1ff" stroke="#3A68E9" stroke-width="1.5" filter="url(#sh)"/>
+  <text class="t-title" x="730" y="446" text-anchor="middle">Benchmark sponsorship,</text>
+  <text class="t-title" x="730" y="462" text-anchor="middle">ads, and partnerships</text>
+  <text class="t-sub" x="730" y="482" text-anchor="middle">GoodRx · Lyra · Spring · DTx failures</text>
+  <line x1="730" y1="382" x2="730" y2="420" stroke="#FE8D61" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text class="t-get" x="748" y="404">Get info</text>
+
+  <line x1="860" y1="458" x2="920" y2="458" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="922" y="420" width="190" height="76" rx="8" fill="#f0f1ff" stroke="#3A68E9" stroke-width="1.5" filter="url(#sh)"/>
+  <text class="t-title" x="1017" y="446" text-anchor="middle">Anchor sponsor ARPU</text>
+  <text class="t-sub" x="1017" y="466" text-anchor="middle">~$10 to $15 /patient/yr</text>
+  <text class="t-sub" x="1017" y="482" text-anchor="middle">Patient CPM $20 to $45</text>
+
+  <!-- ===== LANE 3: Regulatory (straight from diamond, source to the side) ===== -->
+  <line x1="574" y1="600" x2="640" y2="600" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text class="t-yes" x="600" y="592">Yes</text>
+
+  <rect x="642" y="580" width="200" height="76" rx="8" fill="#f0f1ff" stroke="#3A68E9" stroke-width="1.5" filter="url(#sh)"/>
+  <text class="t-title" x="742" y="606" text-anchor="middle">Map regulatory limits</text>
+  <text class="t-sub" x="742" y="626" text-anchor="middle">FTC · OIG · no PHI to funders</text>
+
+  <!-- FTC source: far left of lane, clear of sector boxes above -->
+  <ellipse cx="420" cy="640" rx="64" ry="16" fill="#e8f7fa" stroke="#6FD8FA" stroke-width="1.5"/>
+  <rect x="356" y="640" width="128" height="32" fill="#e8f7fa"/>
+  <ellipse cx="420" cy="672" rx="64" ry="16" fill="#e8f7fa" stroke="#6FD8FA" stroke-width="1.5"/>
+  <text class="t-title" x="420" y="660" text-anchor="middle" font-size="10">FTC / OIG</text>
+  <line x1="484" y1="650" x2="642" y2="620" stroke="#FE8D61" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text class="t-get" x="530" y="628">Get info</text>
+
+  <!-- Merge bus -->
+  <line x1="1052" y1="238" x2="1180" y2="238" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="1112" y1="458" x2="1180" y2="458" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="842" y1="618" x2="1180" y2="618" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="1180" y1="238" x2="1180" y2="618" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="1180" y1="400" x2="1220" y2="400" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="1222" y="362" width="220" height="76" rx="8" fill="#f0f1ff" stroke="#3A68E9" stroke-width="1.5" filter="url(#sh)"/>
+  <text class="t-title" x="1332" y="388" text-anchor="middle">Synthesize market</text>
+  <text class="t-title" x="1332" y="404" text-anchor="middle">constraints + anchors</text>
+  <text class="t-sub" x="1332" y="424" text-anchor="middle">lotus_notes · comparable_notes</text>
+
+  <!-- ===== LANE 4: Legion ===== -->
+  <line x1="1332" y1="438" x2="1332" y2="698" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text class="t-yes" x="1348" y="570">Yes</text>
+
+  <ellipse cx="1332" cy="648" rx="86" ry="17" fill="#e8f7fa" stroke="#6FD8FA" stroke-width="1.5"/>
+  <rect x="1246" y="648" width="172" height="34" fill="#e8f7fa"/>
+  <ellipse cx="1332" cy="682" rx="86" ry="17" fill="#e8f7fa" stroke="#6FD8FA" stroke-width="1.5"/>
+  <text class="t-title" x="1332" y="670" text-anchor="middle" font-size="11">Legion operating data</text>
+
+  <rect x="1237" y="720" width="190" height="76" rx="8" fill="#f0f1ff" stroke="#3A68E9" stroke-width="1.5" filter="url(#sh)"/>
+  <text class="t-title" x="1332" y="746" text-anchor="middle">Establish Legion</text>
+  <text class="t-title" x="1332" y="762" text-anchor="middle">unit economics</text>
+  <text class="t-sub" x="1332" y="782" text-anchor="middle">CAC · visits · episode cost</text>
+  <line x1="1332" y1="682" x2="1332" y2="720" stroke="#FE8D61" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text class="t-get" x="1350" y="704">Get info</text>
+
+  <line x1="1427" y1="758" x2="1470" y2="758" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ===== LANE 5: Model ===== -->
+  <rect x="1472" y="720" width="220" height="76" rx="8" fill="#f0f1ff" stroke="#3A68E9" stroke-width="1.5" filter="url(#sh)"/>
+  <text class="t-title" x="1582" y="746" text-anchor="middle">Build funding model</text>
+  <text class="t-sub" x="1582" y="766" text-anchor="middle">5 funders × 3 care pathways</text>
+  <text class="t-sub" x="1582" y="782" text-anchor="middle">legion_sponsorship_model.xlsx</text>
+
+  <line x1="1692" y1="758" x2="1735" y2="758" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <polygon points="1775,758 1815,728 1855,758 1815,788" fill="#f8fafc" stroke="#d1d5db" stroke-width="1.5"/>
+  <text class="t-title" x="1815" y="754" text-anchor="middle" font-size="10">Revenue</text>
+  <text class="t-title" x="1815" y="768" text-anchor="middle" font-size="10">≥ cost?</text>
+
+  <!-- outcomes with 70px vertical spacing -->
+  <line x1="1855" y1="744" x2="1925" y2="690" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text class="t-branch" x="1865" y="712">Ads ~2%</text>
+  <rect x="1927" y="662" width="165" height="56" rx="8" fill="#fff5ed" stroke="#FE8D61" stroke-width="1.3" filter="url(#sh)"/>
+  <text class="t-title" x="2010" y="686" text-anchor="middle">Ads insufficient</text>
+  <text class="t-sub" x="2010" y="706" text-anchor="middle">~$1.53 /patient/yr</text>
+
+  <line x1="1855" y1="758" x2="1925" y2="758" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text class="t-branch" x="1865" y="750">Sponsor ~13%</text>
+  <rect x="1927" y="730" width="165" height="56" rx="8" fill="#fef9c3" stroke="#eab308" stroke-width="1.3" filter="url(#sh)"/>
+  <text class="t-title" x="2010" y="754" text-anchor="middle">Sponsor partial</text>
+  <text class="t-sub" x="2010" y="774" text-anchor="middle">~$10.50 /patient/yr</text>
+
+  <line x1="1855" y1="772" x2="1925" y2="826" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text class="t-branch" x="1860" y="808">Employer / grant</text>
+  <rect x="1927" y="798" width="165" height="56" rx="8" fill="#edf8f3" stroke="#32D583" stroke-width="1.3" filter="url(#sh)"/>
+  <text class="t-title" x="2010" y="822" text-anchor="middle">Stronger modeled</text>
+  <text class="t-sub" x="2010" y="842" text-anchor="middle">$330 to $750 /patient/yr</text>
+
+  <line x1="2092" y1="690" x2="2140" y2="690" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="2092" y1="758" x2="2140" y2="758" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="2092" y1="826" x2="2140" y2="826" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="2140" y1="690" x2="2140" y2="826" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="2140" y1="758" x2="2185" y2="758" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="2187" y="720" width="220" height="76" rx="8" fill="#f0f1ff" stroke="#3A68E9" stroke-width="1.5" filter="url(#sh)"/>
+  <text class="t-title" x="2297" y="746" text-anchor="middle">Test scale contribution</text>
+  <text class="t-sub" x="2297" y="766" text-anchor="middle">At ~50K actives / ~$100M revenue</text>
+  <text class="t-sub" x="2297" y="782" text-anchor="middle">Insurance ~99% · ads &lt;0.1%</text>
+
+  <line x1="2407" y1="758" x2="2450" y2="758" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <polygon points="2490,758 2530,728 2570,758 2530,788" fill="#f8fafc" stroke="#d1d5db" stroke-width="1.5"/>
+  <text class="t-title" x="2530" y="754" text-anchor="middle" font-size="10">Trust +</text>
+  <text class="t-title" x="2530" y="768" text-anchor="middle" font-size="10">legal OK?</text>
+  <text class="t-yes" x="2510" y="742">Test</text>
+
+  <!-- ===== LANE 6: Validation ===== -->
+  <line x1="2530" y1="788" x2="2530" y2="870" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect x="2430" y="940" width="200" height="76" rx="8" fill="#f0f1ff" stroke="#3A68E9" stroke-width="1.5" filter="url(#sh)"/>
+  <text class="t-title" x="2530" y="966" text-anchor="middle">Design falsification test</text>
+  <text class="t-sub" x="2530" y="986" text-anchor="middle">Buyer WTP interviews</text>
+  <text class="t-sub" x="2530" y="1002" text-anchor="middle">Patient trust survey ($10 to $25K)</text>
+
+  <!-- sources below test box, not overlapping -->
+  <ellipse cx="2240" cy="1100" rx="78" ry="17" fill="#e8f7fa" stroke="#6FD8FA" stroke-width="1.5"/>
+  <rect x="2162" y="1100" width="156" height="34" fill="#e8f7fa"/>
+  <ellipse cx="2240" cy="1134" rx="78" ry="17" fill="#e8f7fa" stroke="#6FD8FA" stroke-width="1.5"/>
+  <text class="t-title" x="2240" y="1122" text-anchor="middle" font-size="10">29 buyer targets</text>
+  <line x1="2430" y1="990" x2="2300" y2="1100" stroke="#FE8D61" stroke-width="1.5" stroke-dasharray="5 4"/>
+
+  <ellipse cx="2720" cy="1100" rx="74" ry="17" fill="#e8f7fa" stroke="#6FD8FA" stroke-width="1.5"/>
+  <rect x="2646" y="1100" width="148" height="34" fill="#e8f7fa"/>
+  <ellipse cx="2720" cy="1134" rx="74" ry="17" fill="#e8f7fa" stroke="#6FD8FA" stroke-width="1.5"/>
+  <text class="t-title" x="2720" y="1122" text-anchor="middle" font-size="10">Survey prototype</text>
+  <line x1="2690" y1="1100" x2="2600" y2="1016" stroke="#FE8D61" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text class="t-get" x="2650" y="1060">Get info</text>
+
+  <!-- Recommendation -->
+  <line x1="2530" y1="1016" x2="2530" y2="1240" stroke="#9ca3af" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text class="t-yes" x="2546" y="1130">Yes</text>
+
+  <rect x="2416" y="1242" width="228" height="76" rx="10" fill="#3A68E9" stroke="#2563eb" stroke-width="1.5" filter="url(#sh)"/>
+  <text x="2530" y="1270" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">Recommendation</text>
+  <text x="2530" y="1290" text-anchor="middle" font-size="11" fill="#e0e7ff">Run limited test. Do not make ads</text>
+  <text x="2530" y="1306" text-anchor="middle" font-size="11" fill="#e0e7ff">the foundation of free care.</text>
+
+  <text x="36" y="1488" font-size="11" fill="#9ca3af" font-weight="600">Artifacts along this path</text>
+  <text x="36" y="1510" font-size="10" fill="#6b7280">research/ · model/legion_sponsorship_model.xlsx · deliverables/deck.html · experiment_spec.md · sponsor_test_package.md</text>
+</svg>
+</div>
+
+<p class="foot">File: <code>deliverables/thinking_pathway.html</code> · Scroll horizontally on smaller screens.</p>
+
+</body>
+</html>

@@ -1,0 +1,245 @@
+"SECTION 1: ONE-WAY TORNADO SENSITIVITY (north-star metric, USD/patient/yr)"
+pathway,model,assumption_id,assumption_label,base_north_star_usd_per_patient_per_yr,north_star_at_assumption_low_usd_per_patient_per_yr,north_star_at_assumption_high_usd_per_patient_per_yr,swing_usd_per_patient_per_yr,tornado_rank
+traditional,A_programmatic_ads,A01,Care cost - traditional visit,-400.53,-379.33,-458.83,79.5,1
+traditional,A_programmatic_ads,A13,Eligible patient volume,-400.53,-428.86,-396.0,32.87,2
+traditional,A_programmatic_ads,A26,"Core-book trust-spillover rate (contagion term, v2)",-400.53,-397.29,-416.75,19.46,3
+traditional,A_programmatic_ads,A06b,Engagement - ad sessions/patient/yr,-400.53,-401.6,-389.88,11.72,4
+traditional,A_programmatic_ads,A08,Sales/servicing cost per contract,-400.53,-398.53,-405.53,7.0,5
+traditional,A_programmatic_ads,A25,"Core-book revenue exposure per patient (contagion term, v2)",-400.53,-400.53,-406.6,6.07,6
+traditional,A_programmatic_ads,A09,Compliance/legal cost,-400.53,-398.86,-403.86,5.0,7
+traditional,A_programmatic_ads,A11,Trust churn - retention loss,-400.53,-400.47,-400.68,0.21,8
+traditional,A_programmatic_ads,A10,Trust churn - booking conversion loss,-400.53,-400.48,-400.62,0.14,9
+traditional,A_programmatic_ads,A05,Sponsor ARPU (Model B anchor),-400.53,-400.53,-400.53,0.0,10
+traditional,A_programmatic_ads,A15,Sponsor ARPU - employer PEPM rate (Model D anchor),-400.53,-400.53,-400.53,0.0,11
+traditional,A_programmatic_ads,A02,Care cost - AI-supported visit,-400.53,-400.53,-400.53,0.0,12
+traditional,A_programmatic_ads,A02b,Care cost - AI-driven episode,-400.53,-400.53,-400.53,0.0,13
+traditional,A_programmatic_ads,A21,Engagement - employer utilization adjustment,-400.53,-400.53,-400.53,0.0,14
+traditional,A_programmatic_ads,A07,Sponsor renewal rate,-400.53,-400.53,-400.53,0.0,15
+traditional,B_fixed_fee_sponsorship_external_anchor,A01,Care cost - traditional visit,-392.37,-371.17,-450.67,79.5,1
+traditional,B_fixed_fee_sponsorship_external_anchor,A13,Eligible patient volume,-392.37,-420.7,-387.83,32.87,2
+traditional,B_fixed_fee_sponsorship_external_anchor,A26,"Core-book trust-spillover rate (contagion term, v2)",-392.37,-389.12,-408.59,19.46,3
+traditional,B_fixed_fee_sponsorship_external_anchor,A05,Sponsor ARPU (Model B anchor),-392.37,-395.55,-376.44,19.11,4
+traditional,B_fixed_fee_sponsorship_external_anchor,A08,Sales/servicing cost per contract,-392.37,-390.37,-397.37,7.0,5
+traditional,B_fixed_fee_sponsorship_external_anchor,A25,"Core-book revenue exposure per patient (contagion term, v2)",-392.37,-392.37,-398.44,6.07,6
+traditional,B_fixed_fee_sponsorship_external_anchor,A07,Sponsor renewal rate,-392.37,-395.1,-389.64,5.46,7
+traditional,B_fixed_fee_sponsorship_external_anchor,A09,Compliance/legal cost,-392.37,-390.7,-395.7,5.0,8
+traditional,B_fixed_fee_sponsorship_external_anchor,A11,Trust churn - retention loss,-392.37,-391.95,-393.42,1.47,9
+traditional,B_fixed_fee_sponsorship_external_anchor,A10,Trust churn - booking conversion loss,-392.37,-392.05,-393.0,0.94,10
+traditional,B_fixed_fee_sponsorship_external_anchor,A15,Sponsor ARPU - employer PEPM rate (Model D anchor),-392.37,-392.37,-392.37,0.0,11
+traditional,B_fixed_fee_sponsorship_external_anchor,A02,Care cost - AI-supported visit,-392.37,-392.37,-392.37,0.0,12
+traditional,B_fixed_fee_sponsorship_external_anchor,A02b,Care cost - AI-driven episode,-392.37,-392.37,-392.37,0.0,13
+traditional,B_fixed_fee_sponsorship_external_anchor,A06b,Engagement - ad sessions/patient/yr,-392.37,-392.37,-392.37,0.0,14
+traditional,B_fixed_fee_sponsorship_external_anchor,A21,Engagement - employer utilization adjustment,-392.37,-392.37,-392.37,0.0,15
+traditional,C_performance_partnership,A01,Care cost - traditional visit,-394.93,-373.73,-453.23,79.5,1
+traditional,C_performance_partnership,A13,Eligible patient volume,-394.93,-423.27,-390.4,32.87,2
+traditional,C_performance_partnership,A26,"Core-book trust-spillover rate (contagion term, v2)",-394.93,-391.69,-411.15,19.46,3
+traditional,C_performance_partnership,A08,Sales/servicing cost per contract,-394.93,-392.93,-399.93,7.0,4
+traditional,C_performance_partnership,A25,"Core-book revenue exposure per patient (contagion term, v2)",-394.93,-394.93,-401.0,6.07,5
+traditional,C_performance_partnership,A09,Compliance/legal cost,-394.93,-393.27,-398.27,5.0,6
+traditional,C_performance_partnership,A11,Trust churn - retention loss,-394.93,-394.63,-395.7,1.08,7
+traditional,C_performance_partnership,A10,Trust churn - booking conversion loss,-394.93,-394.7,-395.39,0.69,8
+traditional,C_performance_partnership,A05,Sponsor ARPU (Model B anchor),-394.93,-394.93,-394.93,0.0,9
+traditional,C_performance_partnership,A15,Sponsor ARPU - employer PEPM rate (Model D anchor),-394.93,-394.93,-394.93,0.0,10
+traditional,C_performance_partnership,A02,Care cost - AI-supported visit,-394.93,-394.93,-394.93,0.0,11
+traditional,C_performance_partnership,A02b,Care cost - AI-driven episode,-394.93,-394.93,-394.93,0.0,12
+traditional,C_performance_partnership,A06b,Engagement - ad sessions/patient/yr,-394.93,-394.93,-394.93,0.0,13
+traditional,C_performance_partnership,A21,Engagement - employer utilization adjustment,-394.93,-394.93,-394.93,0.0,14
+traditional,C_performance_partnership,A07,Sponsor renewal rate,-394.93,-394.93,-394.93,0.0,15
+traditional,D_employer_payer_underwriting,A15,Sponsor ARPU - employer PEPM rate (Model D anchor),-101.62,-383.9,1700.18,2084.08,1
+traditional,D_employer_payer_underwriting,A21,Engagement - employer utilization adjustment,-101.62,-238.12,34.88,273.0,2
+traditional,D_employer_payer_underwriting,A01,Care cost - traditional visit,-101.62,-80.42,-159.92,79.5,3
+traditional,D_employer_payer_underwriting,A11,Trust churn - retention loss,-101.62,-88.42,-134.62,46.2,4
+traditional,D_employer_payer_underwriting,A13,Eligible patient volume,-101.62,-129.95,-97.09,32.87,5
+traditional,D_employer_payer_underwriting,A10,Trust churn - booking conversion loss,-101.62,-91.72,-121.42,29.7,6
+traditional,D_employer_payer_underwriting,A26,"Core-book trust-spillover rate (contagion term, v2)",-101.62,-98.38,-117.84,19.46,7
+traditional,D_employer_payer_underwriting,A08,Sales/servicing cost per contract,-101.62,-99.62,-106.62,7.0,8
+traditional,D_employer_payer_underwriting,A25,"Core-book revenue exposure per patient (contagion term, v2)",-101.62,-101.62,-107.69,6.07,9
+traditional,D_employer_payer_underwriting,A09,Compliance/legal cost,-101.62,-99.95,-104.95,5.0,10
+traditional,D_employer_payer_underwriting,A05,Sponsor ARPU (Model B anchor),-101.62,-101.62,-101.62,0.0,11
+traditional,D_employer_payer_underwriting,A02,Care cost - AI-supported visit,-101.62,-101.62,-101.62,0.0,12
+traditional,D_employer_payer_underwriting,A02b,Care cost - AI-driven episode,-101.62,-101.62,-101.62,0.0,13
+traditional,D_employer_payer_underwriting,A06b,Engagement - ad sessions/patient/yr,-101.62,-101.62,-101.62,0.0,14
+traditional,D_employer_payer_underwriting,A07,Sponsor renewal rate,-101.62,-101.62,-101.62,0.0,15
+traditional,E_foundation_underwriting,A11,Trust churn - retention loss,280.58,310.58,205.58,105.0,1
+traditional,E_foundation_underwriting,A01,Care cost - traditional visit,280.58,301.78,222.28,79.5,2
+traditional,E_foundation_underwriting,A10,Trust churn - booking conversion loss,280.58,303.08,235.58,67.5,3
+traditional,E_foundation_underwriting,A13,Eligible patient volume,280.58,252.25,285.11,32.87,4
+traditional,E_foundation_underwriting,A26,"Core-book trust-spillover rate (contagion term, v2)",280.58,283.82,264.36,19.46,5
+traditional,E_foundation_underwriting,A08,Sales/servicing cost per contract,280.58,282.58,275.58,7.0,6
+traditional,E_foundation_underwriting,A25,"Core-book revenue exposure per patient (contagion term, v2)",280.58,280.58,274.51,6.07,7
+traditional,E_foundation_underwriting,A09,Compliance/legal cost,280.58,282.25,277.25,5.0,8
+traditional,E_foundation_underwriting,A05,Sponsor ARPU (Model B anchor),280.58,280.58,280.58,0.0,9
+traditional,E_foundation_underwriting,A15,Sponsor ARPU - employer PEPM rate (Model D anchor),280.58,280.58,280.58,0.0,10
+traditional,E_foundation_underwriting,A02,Care cost - AI-supported visit,280.58,280.58,280.58,0.0,11
+traditional,E_foundation_underwriting,A02b,Care cost - AI-driven episode,280.58,280.58,280.58,0.0,12
+traditional,E_foundation_underwriting,A06b,Engagement - ad sessions/patient/yr,280.58,280.58,280.58,0.0,13
+traditional,E_foundation_underwriting,A21,Engagement - employer utilization adjustment,280.58,280.58,280.58,0.0,14
+traditional,E_foundation_underwriting,A07,Sponsor renewal rate,280.58,280.58,280.58,0.0,15
+ai_supported,A_programmatic_ads,A02,Care cost - AI-supported visit,-452.33,-392.33,-548.33,156.0,1
+ai_supported,A_programmatic_ads,A13,Eligible patient volume,-452.33,-480.66,-447.8,32.87,2
+ai_supported,A_programmatic_ads,A26,"Core-book trust-spillover rate (contagion term, v2)",-452.33,-449.09,-468.55,19.46,3
+ai_supported,A_programmatic_ads,A06b,Engagement - ad sessions/patient/yr,-452.33,-453.4,-441.68,11.72,4
+ai_supported,A_programmatic_ads,A08,Sales/servicing cost per contract,-452.33,-450.33,-457.33,7.0,5
+ai_supported,A_programmatic_ads,A25,"Core-book revenue exposure per patient (contagion term, v2)",-452.33,-452.33,-458.4,6.07,6
+ai_supported,A_programmatic_ads,A09,Compliance/legal cost,-452.33,-450.66,-455.66,5.0,7
+ai_supported,A_programmatic_ads,A11,Trust churn - retention loss,-452.33,-452.27,-452.48,0.21,8
+ai_supported,A_programmatic_ads,A10,Trust churn - booking conversion loss,-452.33,-452.28,-452.42,0.14,9
+ai_supported,A_programmatic_ads,A05,Sponsor ARPU (Model B anchor),-452.33,-452.33,-452.33,0.0,10
+ai_supported,A_programmatic_ads,A15,Sponsor ARPU - employer PEPM rate (Model D anchor),-452.33,-452.33,-452.33,0.0,11
+ai_supported,A_programmatic_ads,A01,Care cost - traditional visit,-452.33,-452.33,-452.33,0.0,12
+ai_supported,A_programmatic_ads,A02b,Care cost - AI-driven episode,-452.33,-452.33,-452.33,0.0,13
+ai_supported,A_programmatic_ads,A21,Engagement - employer utilization adjustment,-452.33,-452.33,-452.33,0.0,14
+ai_supported,A_programmatic_ads,A07,Sponsor renewal rate,-452.33,-452.33,-452.33,0.0,15
+ai_supported,B_fixed_fee_sponsorship_external_anchor,A02,Care cost - AI-supported visit,-444.17,-384.17,-540.17,156.0,1
+ai_supported,B_fixed_fee_sponsorship_external_anchor,A13,Eligible patient volume,-444.17,-472.5,-439.63,32.87,2
+ai_supported,B_fixed_fee_sponsorship_external_anchor,A26,"Core-book trust-spillover rate (contagion term, v2)",-444.17,-440.92,-460.39,19.46,3
+ai_supported,B_fixed_fee_sponsorship_external_anchor,A05,Sponsor ARPU (Model B anchor),-444.17,-447.35,-428.24,19.11,4
+ai_supported,B_fixed_fee_sponsorship_external_anchor,A08,Sales/servicing cost per contract,-444.17,-442.17,-449.17,7.0,5
+ai_supported,B_fixed_fee_sponsorship_external_anchor,A25,"Core-book revenue exposure per patient (contagion term, v2)",-444.17,-444.17,-450.24,6.07,6
+ai_supported,B_fixed_fee_sponsorship_external_anchor,A07,Sponsor renewal rate,-444.17,-446.9,-441.44,5.46,7
+ai_supported,B_fixed_fee_sponsorship_external_anchor,A09,Compliance/legal cost,-444.17,-442.5,-447.5,5.0,8
+ai_supported,B_fixed_fee_sponsorship_external_anchor,A11,Trust churn - retention loss,-444.17,-443.75,-445.22,1.47,9
+ai_supported,B_fixed_fee_sponsorship_external_anchor,A10,Trust churn - booking conversion loss,-444.17,-443.85,-444.8,0.94,10
+ai_supported,B_fixed_fee_sponsorship_external_anchor,A15,Sponsor ARPU - employer PEPM rate (Model D anchor),-444.17,-444.17,-444.17,0.0,11
+ai_supported,B_fixed_fee_sponsorship_external_anchor,A01,Care cost - traditional visit,-444.17,-444.17,-444.17,0.0,12
+ai_supported,B_fixed_fee_sponsorship_external_anchor,A02b,Care cost - AI-driven episode,-444.17,-444.17,-444.17,0.0,13
+ai_supported,B_fixed_fee_sponsorship_external_anchor,A06b,Engagement - ad sessions/patient/yr,-444.17,-444.17,-444.17,0.0,14
+ai_supported,B_fixed_fee_sponsorship_external_anchor,A21,Engagement - employer utilization adjustment,-444.17,-444.17,-444.17,0.0,15
+ai_supported,C_performance_partnership,A02,Care cost - AI-supported visit,-446.73,-386.73,-542.73,156.0,1
+ai_supported,C_performance_partnership,A13,Eligible patient volume,-446.73,-475.07,-442.2,32.87,2
+ai_supported,C_performance_partnership,A26,"Core-book trust-spillover rate (contagion term, v2)",-446.73,-443.49,-462.95,19.46,3
+ai_supported,C_performance_partnership,A08,Sales/servicing cost per contract,-446.73,-444.73,-451.73,7.0,4
+ai_supported,C_performance_partnership,A25,"Core-book revenue exposure per patient (contagion term, v2)",-446.73,-446.73,-452.8,6.07,5
+ai_supported,C_performance_partnership,A09,Compliance/legal cost,-446.73,-445.07,-450.07,5.0,6
+ai_supported,C_performance_partnership,A11,Trust churn - retention loss,-446.73,-446.43,-447.5,1.08,7
+ai_supported,C_performance_partnership,A10,Trust churn - booking conversion loss,-446.73,-446.5,-447.19,0.69,8
+ai_supported,C_performance_partnership,A05,Sponsor ARPU (Model B anchor),-446.73,-446.73,-446.73,0.0,9
+ai_supported,C_performance_partnership,A15,Sponsor ARPU - employer PEPM rate (Model D anchor),-446.73,-446.73,-446.73,0.0,10
+ai_supported,C_performance_partnership,A01,Care cost - traditional visit,-446.73,-446.73,-446.73,0.0,11
+ai_supported,C_performance_partnership,A02b,Care cost - AI-driven episode,-446.73,-446.73,-446.73,0.0,12
+ai_supported,C_performance_partnership,A06b,Engagement - ad sessions/patient/yr,-446.73,-446.73,-446.73,0.0,13
+ai_supported,C_performance_partnership,A21,Engagement - employer utilization adjustment,-446.73,-446.73,-446.73,0.0,14
+ai_supported,C_performance_partnership,A07,Sponsor renewal rate,-446.73,-446.73,-446.73,0.0,15
+ai_supported,D_employer_payer_underwriting,A15,Sponsor ARPU - employer PEPM rate (Model D anchor),-153.42,-435.7,1648.38,2084.08,1
+ai_supported,D_employer_payer_underwriting,A21,Engagement - employer utilization adjustment,-153.42,-289.92,-16.92,273.0,2
+ai_supported,D_employer_payer_underwriting,A02,Care cost - AI-supported visit,-153.42,-93.42,-249.42,156.0,3
+ai_supported,D_employer_payer_underwriting,A11,Trust churn - retention loss,-153.42,-140.22,-186.42,46.2,4
+ai_supported,D_employer_payer_underwriting,A13,Eligible patient volume,-153.42,-181.75,-148.89,32.87,5
+ai_supported,D_employer_payer_underwriting,A10,Trust churn - booking conversion loss,-153.42,-143.52,-173.22,29.7,6
+ai_supported,D_employer_payer_underwriting,A26,"Core-book trust-spillover rate (contagion term, v2)",-153.42,-150.18,-169.64,19.46,7
+ai_supported,D_employer_payer_underwriting,A08,Sales/servicing cost per contract,-153.42,-151.42,-158.42,7.0,8
+ai_supported,D_employer_payer_underwriting,A25,"Core-book revenue exposure per patient (contagion term, v2)",-153.42,-153.42,-159.49,6.07,9
+ai_supported,D_employer_payer_underwriting,A09,Compliance/legal cost,-153.42,-151.75,-156.75,5.0,10
+ai_supported,D_employer_payer_underwriting,A05,Sponsor ARPU (Model B anchor),-153.42,-153.42,-153.42,0.0,11
+ai_supported,D_employer_payer_underwriting,A01,Care cost - traditional visit,-153.42,-153.42,-153.42,0.0,12
+ai_supported,D_employer_payer_underwriting,A02b,Care cost - AI-driven episode,-153.42,-153.42,-153.42,0.0,13
+ai_supported,D_employer_payer_underwriting,A06b,Engagement - ad sessions/patient/yr,-153.42,-153.42,-153.42,0.0,14
+ai_supported,D_employer_payer_underwriting,A07,Sponsor renewal rate,-153.42,-153.42,-153.42,0.0,15
+ai_supported,E_foundation_underwriting,A02,Care cost - AI-supported visit,228.78,288.78,132.78,156.0,1
+ai_supported,E_foundation_underwriting,A11,Trust churn - retention loss,228.78,258.78,153.78,105.0,2
+ai_supported,E_foundation_underwriting,A10,Trust churn - booking conversion loss,228.78,251.28,183.78,67.5,3
+ai_supported,E_foundation_underwriting,A13,Eligible patient volume,228.78,200.44,233.31,32.87,4
+ai_supported,E_foundation_underwriting,A26,"Core-book trust-spillover rate (contagion term, v2)",228.78,232.02,212.56,19.46,5
+ai_supported,E_foundation_underwriting,A08,Sales/servicing cost per contract,228.78,230.78,223.78,7.0,6
+ai_supported,E_foundation_underwriting,A25,"Core-book revenue exposure per patient (contagion term, v2)",228.78,228.78,222.71,6.07,7
+ai_supported,E_foundation_underwriting,A09,Compliance/legal cost,228.78,230.44,225.44,5.0,8
+ai_supported,E_foundation_underwriting,A05,Sponsor ARPU (Model B anchor),228.78,228.78,228.78,0.0,9
+ai_supported,E_foundation_underwriting,A15,Sponsor ARPU - employer PEPM rate (Model D anchor),228.78,228.78,228.78,0.0,10
+ai_supported,E_foundation_underwriting,A01,Care cost - traditional visit,228.78,228.78,228.78,0.0,11
+ai_supported,E_foundation_underwriting,A02b,Care cost - AI-driven episode,228.78,228.78,228.78,0.0,12
+ai_supported,E_foundation_underwriting,A06b,Engagement - ad sessions/patient/yr,228.78,228.78,228.78,0.0,13
+ai_supported,E_foundation_underwriting,A21,Engagement - employer utilization adjustment,228.78,228.78,228.78,0.0,14
+ai_supported,E_foundation_underwriting,A07,Sponsor renewal rate,228.78,228.78,228.78,0.0,15
+ai_driven,A_programmatic_ads,A02b,Care cost - AI-driven episode,-56.33,-20.33,-158.33,138.0,1
+ai_driven,A_programmatic_ads,A13,Eligible patient volume,-56.33,-84.66,-51.8,32.87,2
+ai_driven,A_programmatic_ads,A26,"Core-book trust-spillover rate (contagion term, v2)",-56.33,-53.09,-72.55,19.46,3
+ai_driven,A_programmatic_ads,A06b,Engagement - ad sessions/patient/yr,-56.33,-57.4,-45.68,11.72,4
+ai_driven,A_programmatic_ads,A08,Sales/servicing cost per contract,-56.33,-54.33,-61.33,7.0,5
+ai_driven,A_programmatic_ads,A25,"Core-book revenue exposure per patient (contagion term, v2)",-56.33,-56.33,-62.4,6.07,6
+ai_driven,A_programmatic_ads,A09,Compliance/legal cost,-56.33,-54.66,-59.66,5.0,7
+ai_driven,A_programmatic_ads,A11,Trust churn - retention loss,-56.33,-56.27,-56.48,0.21,8
+ai_driven,A_programmatic_ads,A10,Trust churn - booking conversion loss,-56.33,-56.28,-56.42,0.14,9
+ai_driven,A_programmatic_ads,A05,Sponsor ARPU (Model B anchor),-56.33,-56.33,-56.33,0.0,10
+ai_driven,A_programmatic_ads,A15,Sponsor ARPU - employer PEPM rate (Model D anchor),-56.33,-56.33,-56.33,0.0,11
+ai_driven,A_programmatic_ads,A01,Care cost - traditional visit,-56.33,-56.33,-56.33,0.0,12
+ai_driven,A_programmatic_ads,A02,Care cost - AI-supported visit,-56.33,-56.33,-56.33,0.0,13
+ai_driven,A_programmatic_ads,A21,Engagement - employer utilization adjustment,-56.33,-56.33,-56.33,0.0,14
+ai_driven,A_programmatic_ads,A07,Sponsor renewal rate,-56.33,-56.33,-56.33,0.0,15
+ai_driven,B_fixed_fee_sponsorship_external_anchor,A02b,Care cost - AI-driven episode,-48.17,-12.17,-150.17,138.0,1
+ai_driven,B_fixed_fee_sponsorship_external_anchor,A13,Eligible patient volume,-48.17,-76.5,-43.63,32.87,2
+ai_driven,B_fixed_fee_sponsorship_external_anchor,A26,"Core-book trust-spillover rate (contagion term, v2)",-48.17,-44.92,-64.39,19.46,3
+ai_driven,B_fixed_fee_sponsorship_external_anchor,A05,Sponsor ARPU (Model B anchor),-48.17,-51.35,-32.24,19.11,4
+ai_driven,B_fixed_fee_sponsorship_external_anchor,A08,Sales/servicing cost per contract,-48.17,-46.17,-53.17,7.0,5
+ai_driven,B_fixed_fee_sponsorship_external_anchor,A25,"Core-book revenue exposure per patient (contagion term, v2)",-48.17,-48.17,-54.24,6.07,6
+ai_driven,B_fixed_fee_sponsorship_external_anchor,A07,Sponsor renewal rate,-48.17,-50.9,-45.44,5.46,7
+ai_driven,B_fixed_fee_sponsorship_external_anchor,A09,Compliance/legal cost,-48.17,-46.5,-51.5,5.0,8
+ai_driven,B_fixed_fee_sponsorship_external_anchor,A11,Trust churn - retention loss,-48.17,-47.75,-49.22,1.47,9
+ai_driven,B_fixed_fee_sponsorship_external_anchor,A10,Trust churn - booking conversion loss,-48.17,-47.85,-48.8,0.95,10
+ai_driven,B_fixed_fee_sponsorship_external_anchor,A15,Sponsor ARPU - employer PEPM rate (Model D anchor),-48.17,-48.17,-48.17,0.0,11
+ai_driven,B_fixed_fee_sponsorship_external_anchor,A01,Care cost - traditional visit,-48.17,-48.17,-48.17,0.0,12
+ai_driven,B_fixed_fee_sponsorship_external_anchor,A02,Care cost - AI-supported visit,-48.17,-48.17,-48.17,0.0,13
+ai_driven,B_fixed_fee_sponsorship_external_anchor,A06b,Engagement - ad sessions/patient/yr,-48.17,-48.17,-48.17,0.0,14
+ai_driven,B_fixed_fee_sponsorship_external_anchor,A21,Engagement - employer utilization adjustment,-48.17,-48.17,-48.17,0.0,15
+ai_driven,C_performance_partnership,A02b,Care cost - AI-driven episode,-50.73,-14.73,-152.73,138.0,1
+ai_driven,C_performance_partnership,A13,Eligible patient volume,-50.73,-79.07,-46.2,32.87,2
+ai_driven,C_performance_partnership,A26,"Core-book trust-spillover rate (contagion term, v2)",-50.73,-47.49,-66.95,19.46,3
+ai_driven,C_performance_partnership,A08,Sales/servicing cost per contract,-50.73,-48.73,-55.73,7.0,4
+ai_driven,C_performance_partnership,A25,"Core-book revenue exposure per patient (contagion term, v2)",-50.73,-50.73,-56.8,6.07,5
+ai_driven,C_performance_partnership,A09,Compliance/legal cost,-50.73,-49.07,-54.07,5.0,6
+ai_driven,C_performance_partnership,A11,Trust churn - retention loss,-50.73,-50.43,-51.5,1.08,7
+ai_driven,C_performance_partnership,A10,Trust churn - booking conversion loss,-50.73,-50.5,-51.19,0.69,8
+ai_driven,C_performance_partnership,A05,Sponsor ARPU (Model B anchor),-50.73,-50.73,-50.73,0.0,9
+ai_driven,C_performance_partnership,A15,Sponsor ARPU - employer PEPM rate (Model D anchor),-50.73,-50.73,-50.73,0.0,10
+ai_driven,C_performance_partnership,A01,Care cost - traditional visit,-50.73,-50.73,-50.73,0.0,11
+ai_driven,C_performance_partnership,A02,Care cost - AI-supported visit,-50.73,-50.73,-50.73,0.0,12
+ai_driven,C_performance_partnership,A06b,Engagement - ad sessions/patient/yr,-50.73,-50.73,-50.73,0.0,13
+ai_driven,C_performance_partnership,A21,Engagement - employer utilization adjustment,-50.73,-50.73,-50.73,0.0,14
+ai_driven,C_performance_partnership,A07,Sponsor renewal rate,-50.73,-50.73,-50.73,0.0,15
+ai_driven,D_employer_payer_underwriting,A15,Sponsor ARPU - employer PEPM rate (Model D anchor),242.58,-39.7,2044.38,2084.08,1
+ai_driven,D_employer_payer_underwriting,A21,Engagement - employer utilization adjustment,242.58,106.08,379.08,273.0,2
+ai_driven,D_employer_payer_underwriting,A02b,Care cost - AI-driven episode,242.58,278.58,140.58,138.0,3
+ai_driven,D_employer_payer_underwriting,A11,Trust churn - retention loss,242.58,255.78,209.58,46.2,4
+ai_driven,D_employer_payer_underwriting,A13,Eligible patient volume,242.58,214.25,247.11,32.87,5
+ai_driven,D_employer_payer_underwriting,A10,Trust churn - booking conversion loss,242.58,252.48,222.78,29.7,6
+ai_driven,D_employer_payer_underwriting,A26,"Core-book trust-spillover rate (contagion term, v2)",242.58,245.82,226.36,19.46,7
+ai_driven,D_employer_payer_underwriting,A08,Sales/servicing cost per contract,242.58,244.58,237.58,7.0,8
+ai_driven,D_employer_payer_underwriting,A25,"Core-book revenue exposure per patient (contagion term, v2)",242.58,242.58,236.51,6.07,9
+ai_driven,D_employer_payer_underwriting,A09,Compliance/legal cost,242.58,244.25,239.25,5.0,10
+ai_driven,D_employer_payer_underwriting,A05,Sponsor ARPU (Model B anchor),242.58,242.58,242.58,0.0,11
+ai_driven,D_employer_payer_underwriting,A01,Care cost - traditional visit,242.58,242.58,242.58,0.0,12
+ai_driven,D_employer_payer_underwriting,A02,Care cost - AI-supported visit,242.58,242.58,242.58,0.0,13
+ai_driven,D_employer_payer_underwriting,A06b,Engagement - ad sessions/patient/yr,242.58,242.58,242.58,0.0,14
+ai_driven,D_employer_payer_underwriting,A07,Sponsor renewal rate,242.58,242.58,242.58,0.0,15
+ai_driven,E_foundation_underwriting,A02b,Care cost - AI-driven episode,624.78,660.78,522.78,138.0,1
+ai_driven,E_foundation_underwriting,A11,Trust churn - retention loss,624.78,654.78,549.78,105.0,2
+ai_driven,E_foundation_underwriting,A10,Trust churn - booking conversion loss,624.78,647.28,579.78,67.5,3
+ai_driven,E_foundation_underwriting,A13,Eligible patient volume,624.78,596.45,629.31,32.87,4
+ai_driven,E_foundation_underwriting,A26,"Core-book trust-spillover rate (contagion term, v2)",624.78,628.02,608.56,19.46,5
+ai_driven,E_foundation_underwriting,A08,Sales/servicing cost per contract,624.78,626.78,619.78,7.0,6
+ai_driven,E_foundation_underwriting,A25,"Core-book revenue exposure per patient (contagion term, v2)",624.78,624.78,618.71,6.07,7
+ai_driven,E_foundation_underwriting,A09,Compliance/legal cost,624.78,626.45,621.45,5.0,8
+ai_driven,E_foundation_underwriting,A05,Sponsor ARPU (Model B anchor),624.78,624.78,624.78,0.0,9
+ai_driven,E_foundation_underwriting,A15,Sponsor ARPU - employer PEPM rate (Model D anchor),624.78,624.78,624.78,0.0,10
+ai_driven,E_foundation_underwriting,A01,Care cost - traditional visit,624.78,624.78,624.78,0.0,11
+ai_driven,E_foundation_underwriting,A02,Care cost - AI-supported visit,624.78,624.78,624.78,0.0,12
+ai_driven,E_foundation_underwriting,A06b,Engagement - ad sessions/patient/yr,624.78,624.78,624.78,0.0,13
+ai_driven,E_foundation_underwriting,A21,Engagement - employer utilization adjustment,624.78,624.78,624.78,0.0,14
+ai_driven,E_foundation_underwriting,A07,Sponsor renewal rate,624.78,624.78,624.78,0.0,15
+
+"SECTION 2: BREAK-EVEN SPONSOR ARPU PER PATHWAY (base-case cost, m=25%)"
+pathway,fully_loaded_cost_usd_per_patient_per_yr,break_even_arpu_zero_margin_usd_per_patient_per_yr,break_even_arpu_at_25pct_margin_usd_per_patient_per_yr,external_anchor_arpu_low_usd_per_patient_per_yr,external_anchor_arpu_base_usd_per_patient_per_yr,external_anchor_arpu_high_usd_per_patient_per_yr,gap_to_external_anchor_base_usd_per_patient_per_yr
+traditional,403.27,403.27,537.7,10.0,15.0,40.0,-522.7
+ai_supported,455.07,455.07,606.76,10.0,15.0,40.0,-591.76
+ai_driven,59.07,59.07,78.76,10.0,15.0,40.0,-63.76
+
+SECTION 3: CONTRIBUTION MARGIN SENSITIVITY (m = 20% / 25% / 30%)
+pathway,target_contribution_margin_pct,fully_loaded_cost_usd_per_patient_per_yr,break_even_arpu_at_target_margin_usd_per_patient_per_yr
+traditional,20.0,403.27,504.09
+traditional,25.0,403.27,537.7
+traditional,30.0,403.27,576.1
+ai_supported,20.0,455.07,568.84
+ai_supported,25.0,455.07,606.76
+ai_supported,30.0,455.07,650.1
+ai_driven,20.0,59.07,73.84
+ai_driven,25.0,59.07,78.76
+ai_driven,30.0,59.07,84.39

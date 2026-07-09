@@ -1,0 +1,30 @@
+# Dependencies & build output
+app/node_modules/
+app/.next/
+app/out/
+app/build/
+app/.vercel/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.venv-qa/
+
+# OS & editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Env & secrets
+.env
+.env.*
+!.env.example
+
+# Excel lock files
+.~lock.*
+
+# Dev-only screenshot QA
+deliverables/slide-previews/

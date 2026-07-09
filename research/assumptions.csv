@@ -1,0 +1,16 @@
+assumption_id,assumption,low,base,high,unit,source,confidence,decision_impact,validation_method,status
+A01,Current cost per clinician visit (COGS),PLACEHOLDER,PLACEHOLDER,PLACEHOLDER,USD/visit,Legion data request,unresolved,high,Legion data,awaiting_data
+A02,AI-only cost per care episode,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER,USD/episode,Legion data request + external benchmarks,unresolved,high,Legion data,awaiting_data
+A03,Visits per patient per year,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER,visits/patient/yr,Legion data request,unresolved,high,Legion data,awaiting_data
+A04,AI interactions per active patient per month,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER,interactions/patient/mo,Legion data request,unresolved,medium,Legion data,awaiting_data
+A05,Sponsor ARPU (fixed-fee sponsorship per exposed patient),10,15,40,USD/patient/yr,"comparable_notes.md: GoodRx pharma-solutions ARPU ~$15/user/yr (derived); high case assumes multi-sponsor stacking (estimate)",low,high,Sponsor-side test (15-20 buyer interviews),estimated_external
+A06,Programmatic health eCPM (patient-vertical contextual),20,30,45,USD/1000 impressions,"comparable_notes.md: Facebook healthcare / patient-health-vertical CPM benchmarks; do NOT use physician CPMs ($70-1000+)",medium,medium,Research benchmarks,estimated_external
+A07,Sponsor renewal rate,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER,%/yr,Sponsor interviews,unresolved,medium,Sponsor-side test,awaiting_research
+A08,Sales + servicing cost per sponsor contract,50000,150000,400000,USD/contract/yr,"comparable_notes.md: pharma agency retainers $5-40K/mo; 9-18 mo enterprise sales cycles (rough estimate)",low,medium,Sponsor-side test,estimated_external
+A15,Employer/payer PEPM underwriting range (Model D anchor),36,1500,4200,USD/patient/yr,"comparable_notes.md: EAP $3-9 PEPM low end; Lyra/Spring Health $120-350/mo premium end (third-party estimates)",low,medium,Employer buyer interviews,estimated_external
+A09,Incremental compliance/legal cost,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER,USD/yr,Regulatory research,unresolved,medium,Counsel estimate,awaiting_research
+A10,Trust-related conversion loss from sponsorship,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER,pp decline,Patient concept test,unresolved,high,Patient-side test,awaiting_test
+A11,Trust-related retention loss from sponsorship,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER,pp decline,Patient concept test,unresolved,high,Patient-side test,awaiting_test
+A12,Revenue multiple for valuation backsolve,5,10,20,x revenue,Public digital-health comps,low,high,Comparables research,awaiting_research
+A13,Eligible patient population for free pathway,PLACEHOLDER,PLACEHOLDER,PLACEHOLDER,patients,Legion data request,unresolved,high,Legion data,awaiting_data
+A14,Target contribution margin,20%,25%,30%,%,Lead judgment,medium,medium,Lead decision,set_provisional

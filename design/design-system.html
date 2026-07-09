@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Legion Health — Design System</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #3A68E9;
+    --primary-hover: #3A68E9E6;
+    --primary-light: #f0f1ff;
+    --secondary: #32D583;
+    --secondary-light: #edf8f3;
+    --tertiary: #FE8D61;
+    --tertiary-light: #fff5ed;
+    --sky: #6FD8FA;
+    --sky-light: #e8f7fa;
+    --gradient-end: #6a8cff;
+    --logo-blue: #3f71fa;
+    --logo-cyan: #70d8fa;
+    --wordmark: #313f4d;
+    --bg: #ffffff;
+    --bg-soft: #f8fafc;
+    --surface: #ffffff;
+    --foreground: #111827;
+    --muted: #4b5563;
+    --muted-light: #6b7280;
+    --border: #e5e7eb;
+    --footer: #0f172a;
+    --success: #15803d;
+    --success-bg: #f0fdf4;
+    --star: #facc15;
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --font: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font);
+    color: var(--foreground);
+    background: var(--bg-soft);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--gradient-end) 100%);
+    color: #fff;
+    padding: 48px 24px 56px;
+  }
+  .hero-inner { max-width: 1080px; margin: 0 auto; }
+  .hero-top { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  .brand-lockup { display: flex; align-items: center; gap: 14px; }
+  .brand-lockup svg { width: 52px; height: auto; }
+  .brand-lockup h1 { font-size: 28px; font-weight: 800; letter-spacing: -0.02em; }
+  .brand-lockup p { font-size: 13px; opacity: 0.9; margin-top: 2px; }
+  .meta { text-align: right; font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.85; }
+  .hero-tagline { margin-top: 28px; max-width: 640px; }
+  .hero-tagline .eyebrow { font-size: 14px; font-weight: 500; opacity: 0.95; }
+  .hero-tagline h2 { font-size: clamp(28px, 4vw, 44px); font-weight: 700; line-height: 1.15; margin-top: 8px; letter-spacing: -0.02em; }
+
+  main { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  section { margin-bottom: 56px; }
+  .section-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  section > h2 { font-size: 24px; font-weight: 700; margin-bottom: 20px; letter-spacing: -0.01em; }
+
+  .swatch-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .swatch {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+  }
+  .swatch-fill { height: 88px; }
+  .swatch-meta { padding: 14px 16px; }
+  .swatch-tier { font-size: 13px; font-weight: 700; display: block; }
+  .swatch-hex { font-family: var(--mono); font-size: 12px; color: var(--muted-light); margin-top: 4px; display: block; }
+  .swatch-use { font-size: 12px; color: var(--muted); margin-top: 8px; line-height: 1.45; }
+
+  .palette-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin-top: 16px; }
+  .mini-swatch {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--surface);
+  }
+  .mini-swatch .fill { height: 56px; }
+  .mini-swatch .meta { padding: 8px 10px; font-size: 11px; }
+  .mini-swatch .hex { font-family: var(--mono); color: var(--muted-light); font-size: 10px; }
+
+  .type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 760px) { .type-grid { grid-template-columns: 1fr; } }
+  .type-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+  }
+  .type-display { font-size: 40px; font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
+  .type-h2 { font-size: 30px; font-weight: 700; letter-spacing: -0.02em; margin-top: 16px; }
+  .type-h3 { font-size: 20px; font-weight: 600; margin-top: 12px; }
+  .type-body { font-size: 16px; color: var(--muted); margin-top: 12px; line-height: 1.6; }
+  .type-small { font-size: 14px; color: var(--muted-light); margin-top: 10px; }
+  .type-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--primary); margin-top: 18px; }
+  .weight-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+  .weight-chip {
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 13px;
+    background: var(--bg-soft);
+  }
+
+  .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .value-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 18px 20px;
+    background: var(--surface);
+  }
+  .value-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; color: var(--primary); }
+  .value-card p { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+  .component-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .component-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 24px;
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+  }
+  .component-card h3 { font-size: 14px; font-weight: 700; margin-bottom: 16px; color: var(--muted-light); text-transform: uppercase; letter-spacing: 0.06em; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 10px 20px;
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary { background: var(--primary); color: #fff; }
+  .btn-primary:hover { background: var(--primary-hover); transform: scale(1.02); }
+  .btn-secondary { background: #fff; color: var(--primary); box-shadow: var(--shadow-lg); }
+  .btn-secondary:hover { background: rgb(255 255 255 / 0.9); }
+  .btn-ghost { background: transparent; color: var(--foreground); border: 1px solid transparent; }
+  .btn-ghost:hover { background: var(--primary-light); color: var(--primary); }
+  .btn-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+
+  .card-demo {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 24px;
+    background: var(--primary-light);
+    box-shadow: var(--shadow-sm);
+  }
+  .card-demo h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+  .card-demo p { font-size: 14px; color: var(--muted); }
+
+  .badge-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .badge-primary { background: var(--primary); color: #fff; }
+  .badge-soft { background: #dbeafe; color: #1d4ed8; }
+  .badge-success { background: var(--success-bg); color: var(--success); }
+  .badge-neutral { background: #f3f4f6; color: #374151; }
+
+  .step-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  @media (max-width: 900px) { .step-cards { grid-template-columns: repeat(2, 1fr); } }
+  .step-card { border-radius: var(--radius-xl); padding: 18px; min-height: 120px; }
+  .step-card .num {
+    width: 28px; height: 28px; border-radius: 999px; display: grid; place-items: center;
+    font-size: 11px; font-weight: 700; color: #fff; margin-bottom: 10px;
+  }
+  .step-card h4 { font-size: 14px; font-weight: 700; color: var(--foreground); }
+
+  .icon-grid { display: flex; flex-wrap: wrap; gap: 16px; }
+  .icon-item {
+    width: 72px; height: 72px; border: 1px solid var(--border); border-radius: var(--radius-lg);
+    display: grid; place-items: center; background: var(--surface);
+  }
+  .icon-item svg { width: 28px; height: 28px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .icon-item.primary { color: var(--primary); }
+  .icon-item.secondary { color: var(--secondary); }
+  .icon-item.tertiary { color: var(--tertiary); }
+
+  .lockup-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .lockup {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    background: var(--surface);
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .lockup-row { display: flex; align-items: center; gap: 12px; }
+  .lockup-row svg { width: 40px; height: auto; flex-shrink: 0; }
+  .lockup-name { font-size: 22px; font-weight: 800; letter-spacing: 0.08em; color: var(--wordmark); text-transform: uppercase; }
+  .lockup-name .light { font-weight: 300; color: var(--muted-light); }
+  .lockup-name .accent { color: var(--primary); }
+  .lockup-note { font-size: 12px; color: var(--muted); }
+  .lockup-mono { font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted-light); }
+
+  footer.page-foot {
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted-light);
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-top">
+      <div class="brand-lockup">
+        <svg viewBox="0 0 617.68 523.87" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><clipPath id="ds-clippath"><path fill="none" d="M265.57,260.72c-11.54-11.49-17.87-26.83-17.87-43.19s6.33-31.7,17.87-43.24l44.31-41.97,42.12,41.97c11.54,11.54,17.87,26.88,17.87,43.24s-6.33,31.7-17.87,43.19c-11.54,11.54-26.88,17.87-43.19,17.87s-31.7-6.33-43.24-17.87M401.43,310.15c51.04-51.08,51.04-134.21,0-185.24l-39.64-39.63c48.41-26.64,109.47-18.46,149.25,21.27,23.72,23.77,36.77,55.32,36.77,88.87s-13.05,65.06-36.77,88.72l-149.98,149.93c-28.88,28.83-75.82,28.83-104.65-.05l-149.89-149.83c-48.94-48.94-48.94-128.65,0-177.65,23.72-23.67,55.22-36.71,88.77-36.71,21.43,0,42.17,5.36,60.58,15.53l-39.69,39.54c-51.08,51.04-51.08,134.16,0,185.24,24.68,24.69,57.6,38.27,92.62,38.27s67.88-13.58,92.62-38.27M57.16,57.17c-76.21,76.21-76.21,200.23,0,276.39l147.01,147.06c28.87,28.83,66.71,43.24,104.6,43.24s75.72-14.42,104.55-43.2l147.11-147.11c36.96-36.86,57.26-85.94,57.26-138.15s-20.3-101.28-57.26-138.24c-67.35-67.4-174.57-75.97-251.61-20.94C275.65,12.52,236.55,0,195.3,0c-52.25,0-101.33,20.31-138.15,57.17"/></clipPath><linearGradient id="ds-lg1" x1="382.19" y1="1778.08" x2="387.37" y2="1778.08" gradientTransform="translate(-40547.12 189223.62) scale(106.28 -106.28)"><stop offset="0" stop-color="#3f71fa"/><stop offset="1" stop-color="#70d8fa"/></linearGradient></defs><g clip-path="url(#ds-clippath)"><rect fill="url(#ds-lg1)" x="-117.66" y="-164.44" width="833.96" height="833.96" transform="translate(-90.9 285.61) rotate(-45)"/></g></svg>
+        <div>
+          <h1>Legion Health Design System</h1>
+          <p>Extracted from app.legionhealth.com</p>
+        </div>
+      </div>
+      <div class="meta">v1 · July 2026<br/>Source: app.legionhealth.com</div>
+    </div>
+    <div class="hero-tagline">
+      <p class="eyebrow">Feel Better—Starting Today</p>
+      <h2>World-class psychiatric care covered by insurance. No waitlists. No referrals needed.</h2>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="colors">
+  <div class="section-label">Color Hierarchy</div>
+  <h2>Core palette</h2>
+  <div class="swatch-grid">
+    <div class="swatch">
+      <div class="swatch-fill" style="background:#3A68E9"></div>
+      <div class="swatch-meta">
+        <span class="swatch-tier" style="color:#3A68E9">Primary</span>
+        <span class="swatch-hex">#3A68E9 · hsl(224.2, 79.9%, 57.1%)</span>
+        <span class="swatch-use">Primary CTAs, hero accents, links, step 1 cards, testimonial gradient start</span>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-fill" style="background:#32D583"></div>
+      <div class="swatch-meta">
+        <span class="swatch-tier" style="color:#32D583">Secondary</span>
+        <span class="swatch-hex">#32D583</span>
+        <span class="swatch-use">Step 2 “Explore matches” cards, success accents, positive indicators</span>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-fill" style="background:#FE8D61"></div>
+      <div class="swatch-meta">
+        <span class="swatch-tier" style="color:#FE8D61">Tertiary</span>
+        <span class="swatch-hex">#FE8D61</span>
+        <span class="swatch-use">Step 3 scheduling cards, calendar highlights, warm accent surfaces</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="extended">
+  <div class="section-label">Extended Palette</div>
+  <h2>Supporting colors</h2>
+  <div class="palette-grid">
+    <div class="mini-swatch"><div class="fill" style="background:#6FD8FA"></div><div class="meta">Sky<br><span class="hex">#6FD8FA</span></div></div>
+    <div class="mini-swatch"><div class="fill" style="background:#6a8cff"></div><div class="meta">Gradient end<br><span class="hex">#6a8cff</span></div></div>
+    <div class="mini-swatch"><div class="fill" style="background:#3f71fa"></div><div class="meta">Logo blue<br><span class="hex">#3f71fa</span></div></div>
+    <div class="mini-swatch"><div class="fill" style="background:#70d8fa"></div><div class="meta">Logo cyan<br><span class="hex">#70d8fa</span></div></div>
+    <div class="mini-swatch"><div class="fill" style="background:#313f4d"></div><div class="meta">Wordmark<br><span class="hex">#313f4d</span></div></div>
+    <div class="mini-swatch"><div class="fill" style="background:#f0f1ff"></div><div class="meta">Lavender bg<br><span class="hex">#f0f1ff</span></div></div>
+    <div class="mini-swatch"><div class="fill" style="background:#edf8f3"></div><div class="meta">Mint bg<br><span class="hex">#edf8f3</span></div></div>
+    <div class="mini-swatch"><div class="fill" style="background:#fff5ed"></div><div class="meta">Peach bg<br><span class="hex">#fff5ed</span></div></div>
+    <div class="mini-swatch"><div class="fill" style="background:#e8f7fa"></div><div class="meta">Cyan bg<br><span class="hex">#e8f7fa</span></div></div>
+    <div class="mini-swatch"><div class="fill" style="background:#111827"></div><div class="meta">Gray 900<br><span class="hex">#111827</span></div></div>
+    <div class="mini-swatch"><div class="fill" style="background:#4b5563"></div><div class="meta">Gray 600<br><span class="hex">#4b5563</span></div></div>
+    <div class="mini-swatch"><div class="fill" style="background:#0f172a"></div><div class="meta">Footer slate<br><span class="hex">#0f172a</span></div></div>
+    <div class="mini-swatch"><div class="fill" style="background:#facc15"></div><div class="meta">Star rating<br><span class="hex">#facc15</span></div></div>
+    <div class="mini-swatch"><div class="fill" style="background:#15803d"></div><div class="meta">Success text<br><span class="hex">#15803d</span></div></div>
+  </div>
+</section>
+
+<section id="typography">
+  <div class="section-label">Typography</div>
+  <h2>Inter — display &amp; body</h2>
+  <div class="type-grid">
+    <div class="type-card">
+      <div class="type-display">Feel Better—<br/>Starting Today</div>
+      <div class="type-h2">Top-Rated Specialists</div>
+      <div class="type-h3">Getting quality mental healthcare has never been easier</div>
+      <div class="type-body">Board-certified psychiatrists and psychiatric nurse practitioners. Virtual appointments from the comfort of your home.</div>
+      <div class="type-label">Display · H1–H3 · Body</div>
+    </div>
+    <div class="type-card">
+      <div class="type-small"><strong style="font-weight:500">Eyebrow / Label</strong> — Simple 4-Step Process</div>
+      <div class="type-small" style="margin-top:14px"><strong style="font-weight:600">UI Medium</strong> — Find Care · How It Works · Get Started</div>
+      <div class="type-small" style="margin-top:14px"><strong style="font-weight:400">Body</strong> — We match you with providers based on your specific needs and insurance coverage.</div>
+      <div class="type-label">Font stack</div>
+      <div class="type-small" style="font-family:var(--mono);margin-top:8px">Inter, ui-sans-serif, system-ui, sans-serif</div>
+      <div class="weight-row">
+        <span class="weight-chip" style="font-weight:400">400</span>
+        <span class="weight-chip" style="font-weight:500">500</span>
+        <span class="weight-chip" style="font-weight:600">600</span>
+        <span class="weight-chip" style="font-weight:700">700</span>
+        <span class="weight-chip" style="font-weight:800">800</span>
+      </div>
+      <div class="type-label">Monospace (meta / codes)</div>
+      <div class="type-small" style="font-family:var(--mono);margin-top:8px">ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas</div>
+    </div>
+  </div>
+</section>
+
+<section id="values">
+  <div class="section-label">Brand Values</div>
+  <h2>Documented site messaging</h2>
+  <div class="values-grid">
+    <div class="value-card"><h3>Simple access</h3><p>Simple 4-step process — match, explore, schedule, connect online.</p></div>
+    <div class="value-card"><h3>Insurance-first</h3><p>World-class psychiatric care covered by insurance. Self-pay welcome with transparent pricing.</p></div>
+    <div class="value-card"><h3>No waitlists</h3><p>Most patients schedule within days. Average wait time: 3 days vs. 3+ weeks nationally.</p></div>
+    <div class="value-card"><h3>Privacy &amp; trust</h3><p>HIPAA-compliant, confidential consultations. Your privacy is our priority.</p></div>
+    <div class="value-card"><h3>Clinical quality</h3><p>Board-certified specialists for anxiety, depression, ADHD, bipolar, and more.</p></div>
+  </div>
+</section>
+
+<section id="components">
+  <div class="section-label">Components</div>
+  <h2>UI patterns</h2>
+  <div class="component-grid">
+    <div class="component-card">
+      <h3>Buttons</h3>
+      <div class="btn-row">
+        <button class="btn btn-primary">Get Started</button>
+        <button class="btn btn-secondary">Book Appointment Now</button>
+        <button class="btn btn-ghost">Browse Providers</button>
+      </div>
+    </div>
+    <div class="component-card">
+      <h3>Badges &amp; pills</h3>
+      <div class="badge-row">
+        <span class="badge badge-primary">Real Patient Stories</span>
+        <span class="badge badge-soft">Anxiety</span>
+        <span class="badge badge-success">10/10 Rating</span>
+        <span class="badge badge-neutral">All Questions</span>
+      </div>
+    </div>
+    <div class="component-card">
+      <h3>Step cards</h3>
+      <div class="step-cards">
+        <div class="step-card" style="background:#f0f1ff"><div class="num" style="background:#3A68E9">1</div><h4>Tell us what's important</h4></div>
+        <div class="step-card" style="background:#edf8f3"><div class="num" style="background:#32D583">2</div><h4>Explore your matches</h4></div>
+        <div class="step-card" style="background:#fff5ed"><div class="num" style="background:#FE8D61">3</div><h4>Schedule your visit</h4></div>
+        <div class="step-card" style="background:#e8f7fa"><div class="num" style="background:#6FD8FA">4</div><h4>Connect online</h4></div>
+      </div>
+    </div>
+    <div class="component-card">
+      <h3>Content card</h3>
+      <div class="card-demo">
+        <h4>Simple 4-Step Process</h4>
+        <p>Getting quality mental healthcare has never been easier. Rounded-xl surfaces, soft shadow-sm, generous padding.</p>
+      </div>
+    </div>
+  </div>
+  <p style="margin-top:16px;font-size:13px;color:var(--muted)">Radius: 6px (md) for buttons · 12px (xl) for cards · Full pills for filters. Light theme with white/slate-50 backgrounds and subtle borders (#e5e7eb).</p>
+</section>
+
+<section id="icons">
+  <div class="section-label">Icons</div>
+  <h2>Lucide — 24px line icons, 2px stroke</h2>
+  <div class="icon-grid">
+    <div class="icon-item primary"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+    <div class="icon-item primary"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div>
+    <div class="icon-item tertiary"><svg viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg></div>
+    <div class="icon-item primary"><svg viewBox="0 0 24 24"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></div>
+    <div class="icon-item primary"><svg viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div>
+    <div class="icon-item primary"><svg viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></div>
+    <div class="icon-item secondary"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+  </div>
+</section>
+
+<section id="lockups">
+  <div class="section-label">Wordmarks · Lockups</div>
+  <h2>Logo treatments</h2>
+  <div class="lockup-grid">
+    <div class="lockup">
+      <div class="lockup-row">
+        <svg viewBox="0 0 617.68 523.87" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="ds-clippath2"><path fill="none" d="M265.57,260.72c-11.54-11.49-17.87-26.83-17.87-43.19s6.33-31.7,17.87-43.24l44.31-41.97,42.12,41.97c11.54,11.54,17.87,26.88,17.87,43.24s-6.33,31.7-17.87,43.19c-11.54,11.54-26.88,17.87-43.19,17.87s-31.7-6.33-43.24-17.87M401.43,310.15c51.04-51.08,51.04-134.21,0-185.24l-39.64-39.63c48.41-26.64,109.47-18.46,149.25,21.27,23.72,23.77,36.77,55.32,36.77,88.87s-13.05,65.06-36.77,88.72l-149.98,149.93c-28.88,28.83-75.82,28.83-104.65-.05l-149.89-149.83c-48.94-48.94-48.94-128.65,0-177.65,23.72-23.67,55.22-36.71,88.77-36.71,21.43,0,42.17,5.36,60.58,15.53l-39.69,39.54c-51.08,51.04-51.08,134.16,0,185.24,24.68,24.69,57.6,38.27,92.62,38.27s67.88-13.58,92.62-38.27M57.16,57.17c-76.21,76.21-76.21,200.23,0,276.39l147.01,147.06c28.87,28.83,66.71,43.24,104.6,43.24s75.72-14.42,104.55-43.2l147.11-147.11c36.96-36.86,57.26-85.94,57.26-138.15s-20.3-101.28-57.26-138.24c-67.35-67.4-174.57-75.97-251.61-20.94C275.65,12.52,236.55,0,195.3,0c-52.25,0-101.33,20.31-138.15,57.17"/></clipPath><linearGradient id="ds-lg2" x1="382.19" y1="1778.08" x2="387.37" y2="1778.08" gradientTransform="translate(-40547.12 189223.62) scale(106.28 -106.28)"><stop offset="0" stop-color="#3f71fa"/><stop offset="1" stop-color="#70d8fa"/></linearGradient></defs><g clip-path="url(#ds-clippath2)"><rect fill="url(#ds-lg2)" x="-117.66" y="-164.44" width="833.96" height="833.96" transform="translate(-90.9 285.61) rotate(-45)"/></g></svg>
+        <span class="lockup-name">Legion Health</span>
+      </div>
+      <p class="lockup-note">Primary header lockup — mark + wordmark (#313f4d)</p>
+      <span class="lockup-mono">Mark + wordmark</span>
+    </div>
+    <div class="lockup">
+      <span class="lockup-name">LEGION<span class="light">HEALTH</span></span>
+      <p class="lockup-note">Split-weight uppercase treatment for compact layouts</p>
+      <span class="lockup-mono">Split weight lockup</span>
+    </div>
+    <div class="lockup">
+      <span class="lockup-name"><span class="accent">LEGION</span> HEALTH</span>
+      <p class="lockup-note">Primary blue accent on first word for hero/marketing surfaces</p>
+      <span class="lockup-mono">Accent lockup</span>
+    </div>
+  </div>
+</section>
+
+<footer class="page-foot">
+  <span>Legion Health Design System · v1</span>
+  <span>legion-sponsorship-case/design/design-system.html</span>
+</footer>
+
+</main>
+</body>
+</html>
