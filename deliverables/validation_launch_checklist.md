@@ -1,8 +1,8 @@
 # Validation Launch Checklist — Ready to Execute
 
-**Context (Legion confirmed 2026-07-09):** **0 of ~3,000 actives are uninsured.** The ads/sponsorship question applies to a **new, incremental uninsured pipeline** — Legion's current reimbursed FFS book is unchanged.
+**Context (Legion confirmed 2026-07-09):** **0 of ≈3,000 actives are uninsured.** The ads/sponsorship question applies to a **new, incremental uninsured pipeline** — Legion's current reimbursed FFS book is unchanged.
 
-**Budget:** ~$10–25K · **Timeline:** 30 days · **Prerequisite:** Legion operating data integrated
+**Budget:** ≈$10–25K · **Timeline:** 30 days · **Prerequisite:** Legion operating data integrated
 
 ---
 
@@ -24,7 +24,7 @@
 | 2 | Van Westendorp WTP on uninsured cohort (1K+ lives minimum) | Median $/patient/yr | Pre-registered: >$100 re-enters sponsorship as co-funder |
 | 3 | Evidence ladder L1→L5 | ≥1 at L4+ (paid design partner intent) | Not polite interest alone |
 
-**Kill:** median WTP ≤ EAP floor (~$36/patient/yr) · any demand for patient-level data · steering economics
+**Kill:** median WTP ≤ EAP floor (≈$36/patient/yr) · any demand for patient-level data · steering economics
 
 **Note:** This is the **literal prompt test** — can sponsors pay enough to cover uninsured care costs?
 
@@ -42,7 +42,7 @@
 
 **Kill:** trust guardrails breach · spillover concern to insured book (brand-level, even though 0 uninsured today)
 
-**No ad pilot** — per-patient gap ~50x at base; immaterial even at scale.
+**No ad pilot** — per-patient gap ≈50x at base; immaterial even at scale.
 
 ---
 
@@ -64,6 +64,6 @@
 
 1. Send counsel questions and get a threshold read back
 2. Conduct or commission buyer interviews (15–20)
-3. Purchase/field patient panel for survey (~$5–10K)
+3. Purchase/field patient panel for survey (≈$5–10K)
 4. Share repo link + live survey URL with reviewer
 5. Offer 30-minute walkthrough (deck → model → survey)

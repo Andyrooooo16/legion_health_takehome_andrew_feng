@@ -1,17 +1,17 @@
 # 30 Day Validation Plan
 
-**Objective:** resolve the open questions on the **literal ads/sponsorship prompt** and the **underwriting adjacent path** — **before Legion's patient base scales** — for low tens of thousands of dollars. This is **not** a test to reach $1B in 30 days. It is a test to decide whether to invest in a sponsorship co-funder layer and/or employer underwriting as the company grows from ~3K toward ~50K+ actives.
+**Objective:** resolve the open questions on the **literal ads/sponsorship prompt** and the **underwriting adjacent path** — **before Legion's patient base scales** — for low tens of thousands of dollars. This is **not** a test to reach $1B in 30 days. It is a test to decide whether to invest in a sponsorship co-funder layer and/or employer underwriting as the company grows from ≈3K toward ≈50K+ actives.
 
 **What this test validates for ads/sponsorship specifically:**
 - **Sponsor WTP interviews** (Packages A/B/C): could brand partnerships pay enough to co-fund free care? Kill criterion: median WTP &lt; $100/patient.
 - **Patient trust survey:** will sponsor framing harm the brand as you scale?
-- **No programmatic ad pilot:** base-case per-patient gap ~50x; ads contribute &lt;0.1% of revenue even at ~50K actives (see `growth_contribution_analysis.md`).
+- **No programmatic ad pilot:** base-case per-patient gap ≈50x; ads contribute &lt;0.1% of revenue even at ≈50K actives (see `growth_contribution_analysis.md`).
 
 **Structure:** Legion's operating data is already in the model. Remaining steps validate sponsor WTP and patient trust.
 
 ## Step 0 — Legion data (complete)
 
-Legion shared episode costs, visit frequency, revenue per visit, CAC, and patient counts. I integrated these into `model/assumptions.csv` and reran the model. Break-even on the AI pathway fell from ~$299 to ~$79/patient/yr. See `data/ceo_data_integration.md`.
+Legion shared episode costs, visit frequency, revenue per visit, CAC, and patient counts. I integrated these into `model/assumptions.csv` and reran the model. Break-even on the AI pathway fell from ≈$299 to ≈$79/patient/yr. See `data/ceo_data_integration.md`.
 
 **Outcome:** Costs came in below external benchmarks. Proceed to buyer interviews and patient survey.
 
@@ -23,7 +23,7 @@ Legion shared episode costs, visit frequency, revenue per visit, CAC, and patien
 **Outputs:** counsel flagged issue list; restricted category confirmation; pilot permissibility read.
 **GATE G1:** unavoidable AKS/CPOM exposure → STOP or redesign before any buyer conversation.
 
-## Step 2, Days 4 7: build the outreach machine (cost: ~$0, founder time)
+## Step 2, Days 4 7: build the outreach machine (cost: ≈$0, founder time)
 
 * Finalize buyer target list: `research/expert_targets.csv` (29 named targets) + employer benefits leaders; sequencing per `sponsor_test_package.md` §7, employers, payers, foundations first; pharma education deferred pending counsel.
 * Finalize interview guide (sponsor_test_package §3, incl. §3.1 probes: PEPM for a NARROW AI psychiatry benefit, realistic utilization, hybrid branded sponsorship package).
@@ -57,7 +57,7 @@ Legion shared episode costs, visit frequency, revenue per visit, CAC, and patien
 ## Success criteria (all required to proceed)
 
 1. Step 0 economics survive real Legion data (break even within reach of evidenced ARPU).
-2. Median credible WTP above the model derived threshold; ≥1 paid design partner or signed pilot commitment; ≥2 additional qualified prospects continuing; plausible ~90 day procurement path.
+2. Median credible WTP above the model derived threshold; ≥1 paid design partner or signed pilot commitment; ≥2 additional qualified prospects continuing; plausible ≈90 day procurement path.
 3. Patient test passes: ≤5pp continuation decline, ≤0.25 trust decline, ≥80% disclosure comprehension, no material independence decline, no guardrail breach (thresholds provisional; update with Legion baselines).
 4. Counsel threshold read clears the structure with zero patient level data flows.
 

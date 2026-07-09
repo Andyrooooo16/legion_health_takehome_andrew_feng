@@ -246,7 +246,7 @@ A guardrail flag (comprehension <80%, strong majority preferring paid option, re
 Two distinct sample size regimes are specified in the brief, and they answer different questions:
 
 * **Discovery (75, 100/arm):** sized to catch large, obvious problems and get directional reads quickly and cheaply. Not sized to formally confirm the provisional non inferiority margins.
-* **Inference (~400/arm):** sized to detect a 10 percentage point difference with conventional power, and is closer to what would be needed to make a statistically defensible non inferiority claim at the stated margins.
+* **Inference (≈400/arm):** sized to detect a 10 percentage point difference with conventional power, and is closer to what would be needed to make a statistically defensible non inferiority claim at the stated margins.
 
 ### Power calculation method
 
@@ -264,7 +264,7 @@ n = 7.84 × 0.49 / 0.01
 n ≈ 384 per arm
 ```
 
-This matches the brief's "~400 participants per arm" guidance for a 10pp MDE and confirms the stated figure is internally consistent with a standard two proportion power calculation at conventional α/power settings.
+This matches the brief's "≈400 participants per arm" guidance for a 10pp MDE and confirms the stated figure is internally consistent with a standard two proportion power calculation at conventional α/power settings.
 
 **Worked example (trust score, continuous):** using `n = 2(z_(α/2)+z_β)²σ²/δ²`, assuming σ ≈ 1.0 (typical SD for a 5 point Likert item) and wanting to detect the 0.25 point margin:
 
@@ -274,7 +274,7 @@ n = 15.68 / 0.0625
 n ≈ 251 per arm
 ```
 
-So detecting the *trust* margin at conventional power requires fewer participants (~251/arm) than detecting the *continuation* margin (~384/arm) under these assumptions, continuation rate is the binding constraint on required sample size if both are to be formally tested at 80% power.
+So detecting the *trust* margin at conventional power requires fewer participants (≈251/arm) than detecting the *continuation* margin (≈384/arm) under these assumptions, continuation rate is the binding constraint on required sample size if both are to be formally tested at 80% power.
 
 ### What a 75, 100/arm test can and cannot conclude
 
@@ -283,7 +283,7 @@ Using n = 87 (midpoint of 75, 100) per arm:
 * **Continuation rate:** standard error of the difference in proportions (assuming p ≈ 0.5 for a conservative estimate) ≈ √(2×0.5×0.5/87) ≈ 0.076. A 95% CI half width ≈ 1.96 × 0.076 ≈ **0.149 (≈15pp)**, wider than the 5pp non inferiority margin itself. **This means the discovery scale test cannot statistically confirm non inferiority at the 5pp margin.** It can reliably flag differences roughly in the 15, 20pp range or larger; anything smaller will likely land in the "inconclusive" bucket by design, not due to a flaw in execution.
 * **Trust/independence score:** SE of the mean difference (σ ≈ 1.0) ≈ √(2×1²/87) ≈ 0.152; 95% CI half width ≈ 1.96 × 0.152 ≈ **0.298**, again wider than the 0.25 margin. Same conclusion: the discovery scale test is built to catch gross problems, not to certify the provisional margins statistically.
 * **Practical implication:** at 75, 100/arm, treat results as **directional and diagnostic** (e.g., "Variant C shows a large, obviously concerning drop in trust and should not proceed to any live pilot" is a legitimate discovery scale conclusion; "Variant A passed non inferiority on trust" is not, unless the CI happens to be tight enough by chance, this should be checked per metric after the data is in, not assumed).
-* If Variants A/B look promising directionally at discovery scale, the inference scale replication (~400/arm) is the appropriate next step before treating H3 as formally resolved.
+* If Variants A/B look promising directionally at discovery scale, the inference scale replication (≈400/arm) is the appropriate next step before treating H3 as formally resolved.
 
 ## 8. Privacy and Ethics
 
@@ -310,7 +310,7 @@ Using n = 87 (midpoint of 75, 100) per arm:
 ### Discovery scale test (75, 100/arm × 4 arms = 300, 400 completes)
 
 * **Fielding:** typically 3, 5 business days once the prototype and feature flags are live, assuming a standard panel vendor and no unusual screening incidence issues.
-* **Cost:** at a typical $5, 15/complete panel rate: low end 4 × 75 × $5 = **$1,500**; high end 4 × 100 × $15 = **$6,000**. A reasonable planning midpoint is roughly **$3,000, $4,000** for 4 × 87 completes at ~$10/complete.
+* **Cost:** at a typical $5, 15/complete panel rate: low end 4 × 75 × $5 = **$1,500**; high end 4 × 100 × $15 = **$6,000**. A reasonable planning midpoint is roughly **$3,000, $4,000** for 4 × 87 completes at ≈$10/complete.
 * **Analysis turnaround:** 2, 3 business days for quantitative analysis plus qualitative coding (coding is the likely bottleneck if free text volume is high).
 
 ### Inference scale replication (≈400/arm × 4 arms = 1,600 completes), if discovery results warrant it

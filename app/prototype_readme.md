@@ -56,7 +56,7 @@ npm run gen:synthetic
 ```
 
 Regenerates `src/data/synthetic participants.json` deterministically (seeded PRNG) from
-the parameters in `scripts/generate synthetic data.mjs`. ~90 fabricated records per arm
+the parameters in `scripts/generate synthetic data.mjs`. ≈90 fabricated records per arm
 (360 total), matching the spec's discovery scale sample size (§7).
 
 ## Plugging in a real PostHog project
@@ -133,7 +133,7 @@ themselves, since project level config can override client side init flags.
 
 * **The discovery scale sample size genuinely produces "inconclusive" results most of
  the time**, exactly as spec §7 predicts analytically. Running the dashboard against
- the seeded synthetic dataset (~90/arm) produces a mix of `inconclusive`/`pass`/`fail`
+ the seeded synthetic dataset (≈90/arm) produces a mix of `inconclusive`/`pass`/`fail`
  labels across the 9 primary vs. Control comparisons (3 metrics × 3 arms), Variant C
  is the only arm that produces `fail` labels in this synthetic run, and even some of
  Variant C's comparisons land as `inconclusive` despite a clearly simulated large
@@ -162,7 +162,7 @@ landing page participants instead of the synthetic seed. Given §7's power analy
 should be reported to stakeholders as a **large problem screen**, not a statistically
 validated non inferiority result, a "pass" label at n≈90/arm is directionally
 reassuring, not confirmatory, and should not be used alone to greenlight a live pilot
-without the ~400/arm inference scale replication the spec describes in §7.
+without the ≈400/arm inference scale replication the spec describes in §7.
 
 ### Remaining Unknowns / Spec Ambiguities Flagged
 

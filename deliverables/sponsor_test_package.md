@@ -70,9 +70,9 @@ where price_per_patient must satisfy:
  for the specific pathway being underwritten)
 
 Anchor candidates for price_per_patient (benchmark derived, NOT Legion specific):
- * Low anchor: ~$10 15/patient/yr (GoodRx pharma manufacturer solutions line
+ * Low anchor: ≈$10 15/patient/yr (GoodRx pharma manufacturer solutions line
  ARPU proxy, comparable_notes.md §4; assumption A05 low/base case)
- * High anchor: ~$36 4,200/patient/yr (employer/payer PEPM range translated to
+ * High anchor: ≈$36 4,200/patient/yr (employer/payer PEPM range translated to
  annual terms, comparable_notes.md; assumption A15), applicable
  mainly if the "sponsor" is closer to an employer/payer archetype
  than a pure brand/media sponsor
@@ -85,7 +85,7 @@ Anchor candidates for price_per_patient (benchmark derived, NOT Legion specific)
 ```
 Sponsor commitment ($) = (exposed_patients / 1000) × eCPM_equivalent × sessions_per_patient_per_yr
 
-Anchor for eCPM_equivalent: ~$20 45 (Facebook healthcare vertical / patient health 
+Anchor for eCPM_equivalent: ≈$20 45 (Facebook healthcare vertical / patient health 
 vertical CPM benchmark, comparable_notes.md §4, assumption A06), explicitly NOT
 the $70 1,000+ physician audience CPM range.
 
@@ -151,7 +151,7 @@ Standard Van Westendorp asks about a *consumer's* price for a *product*; here it
 * "What reporting would you need to justify this spend internally, what specific metrics?"
 * "Would you need any patient level or diagnosis level information to feel comfortable, or is aggregate reporting sufficient?" *(This question is a deliberate red flag probe, see Segment 7.)*
 * "Would you expect category exclusivity (no competing sponsor in the same pathway), and what would that be worth to you?"
-* **Minimum-scale hypothesis probe** (see `sponsor_value_prop.md`): "We are pitching premium association and access, not reach. Would a high-intent cohort of roughly 1,000 to 5,000 eligible patients be enough inventory for you to engage on a fee-for-benefit or access-underwriting deal? If not, what minimum exposed-patient count would you need before this is worth a conversation?" *(KILL CONDITION: if qualified buyers consistently require more than ~25,000 exposed patients before engaging, the association/access value proposition fails and only the employer PEPM route remains.)*
+* **Minimum-scale hypothesis probe** (see `sponsor_value_prop.md`): "We are pitching premium association and access, not reach. Would a high-intent cohort of roughly 1,000 to 5,000 eligible patients be enough inventory for you to engage on a fee-for-benefit or access-underwriting deal? If not, what minimum exposed-patient count would you need before this is worth a conversation?" *(KILL CONDITION: if qualified buyers consistently require more than ≈25,000 exposed patients before engaging, the association/access value proposition fails and only the employer PEPM route remains.)*
 
 ### Segment 6, Procurement process and timeline (5 min)
 
@@ -274,7 +274,7 @@ Total target: 15 20 conversations across 8 stakeholder categories (execution bri
 
 **3. Pilot fee**, **[PLACEHOLDER, amount TBD]**, to be set at or above the greater of (a) the the model's `required_arpu_usd_per_patient_per_yr` threshold for the pathway in scope (pro rated for pilot duration and cohort size), and (b) the qualified WTP established in buyer interviews (Section 6, L3). A pilot fee of $0 does not satisfy the "paid pilot" success criterion and should not be represented as a signed pilot for evidence ladder (Section 5) purposes.
 
-**4. Duration**, **[PLACEHOLDER, e.g., one calendar quarter]**, consistent with the "~90 day procurement path" success criterion; renewal contingent on aggregate program metrics only (Section 1's reporting terms), not patient level outcomes.
+**4. Duration**, **[PLACEHOLDER, e.g., one calendar quarter]**, consistent with the "≈90 day procurement path" success criterion; renewal contingent on aggregate program metrics only (Section 1's reporting terms), not patient level outcomes.
 
 **5. Cohort/scope definition**, Number of eligible patients or exposure volume covered (per Package A/B pricing logic, Section 2); eligibility criteria set solely by Legion's clinical/financial need rules, with no sponsor input into individual patient selection.
 
@@ -296,7 +296,7 @@ Total target: 15 20 conversations across 8 stakeholder categories (execution bri
 
 **Key Findings**
 
-* A complete, execution ready sponsor test package now exists: three sponsor concepts with explicit "never gets" boundaries, a rate card formula (not a number) tied to the the model's `required_arpu_usd_per_patient_per_yr` output and to external benchmarks (GoodRx pharma solutions ~$10 15/patient/yr, employer PEPM $36 4,200/patient/yr, health vertical eCPM $20 45), a 45 minute interview guide with exact question wording including a B2B adapted Van Westendorp module, a 12 point qualification scorecard, a five level evidence ladder (L1 polite interest through L5 signed paid pilot), a sponsor category matrix grounded in the regulatory research's OIG Advisory Opinion pattern, a week by week 30 day outreach sequence, and a plain language LOI/term sheet skeleton with every non negotiable clause flagged for counsel.
+* A complete, execution ready sponsor test package now exists: three sponsor concepts with explicit "never gets" boundaries, a rate card formula (not a number) tied to the the model's `required_arpu_usd_per_patient_per_yr` output and to external benchmarks (GoodRx pharma solutions ≈$10 15/patient/yr, employer PEPM $36 4,200/patient/yr, health vertical eCPM $20 45), a 45 minute interview guide with exact question wording including a B2B adapted Van Westendorp module, a 12 point qualification scorecard, a five level evidence ladder (L1 polite interest through L5 signed paid pilot), a sponsor category matrix grounded in the regulatory research's OIG Advisory Opinion pattern, a week by week 30 day outreach sequence, and a plain language LOI/term sheet skeleton with every non negotiable clause flagged for counsel.
 * The the model (in progress concurrently) shows `required_arpu_usd_per_patient_per_yr` for the fixed fee sponsorship model spans roughly $61/patient/yr (high cost efficiency, AI driven pathway) to several thousand dollars/patient/yr (traditional pathway, low cost scenario), meaning the sponsor test cannot be scored against a single WTP number; it must be scored against the threshold for the specific pathway under discussion.
 * The regulatory research's single most load bearing finding, that sponsor access to any identifiable patient/provider data is the most consistent factor separating favorable from unfavorable OIG outcomes, and the direct cause of the GoodRx and BetterHelp enforcement actions, is now embedded as a structural constant across all three packages, the interview guide's red flag probes, the qualification scorecard, the evidence ladder, and every clause of the term sheet skeleton, rather than appearing once as a caveat.
 

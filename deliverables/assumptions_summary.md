@@ -12,7 +12,7 @@
 | **Pathways compared** | Three care modes run in parallel: traditional clinician-led, AI-supported clinician, mostly AI-driven episode | Framework locked | Legion data pins A01/A02/A02b; A03b and A04 (AI cadences) remain placeholders |
 | **Existing patients** | Sponsor/funder content applies **only** to the free AI pathway; reimbursed patients never see sponsor placements | Design constraint | N/A |
 
-**Not modeled:** total US population × average doctor visits. **Modeled instead:** per-patient visit/episode frequency and an **uninsured AMI cohort** sized from Census/SAMHSA (P01–P08): ~5.9M nationally; A13 low/base/high = Legion reachable capture (25K / 150K / 750K). Detail: `data/uninsured_population_sizing.md`.
+**Not modeled:** total US population × average doctor visits. **Modeled instead:** per-patient visit/episode frequency and an **uninsured AMI cohort** sized from Census/SAMHSA (P01–P08): ≈5.9M nationally; A13 low/base/high = Legion reachable capture (25K / 150K / 750K). Detail: `data/uninsured_population_sizing.md`.
 
 ## Data from Legion
 
@@ -20,10 +20,10 @@
 |---|---|---|
 | Traditional visit COGS (A01) | $74/visit | Legion |
 | AI-supported visit COGS (A02) | $37/visit | Legion |
-| AI episode cost (A02b) | ~$8/episode fully loaded | Legion (+ escalation estimate) |
+| AI episode cost (A02b) | ≈$8/episode fully loaded | Legion (+ escalation estimate) |
 | Visits per patient/yr (A03) | 5.3 base; 13.2 high | Legion |
 | Net revenue per visit | $153 | Legion |
-| Active patients | ~3,000 (0 uninsured) | Legion |
+| Active patients | ≈3,000 (0 uninsured) | Legion |
 | CAC (A28) | $250 | Legion |
 | Core-book revenue exposure (A25) | $811/yr | Derived: 5.3 × $153 |
 
@@ -44,34 +44,34 @@ Detail: `data/ceo_data_integration.md`.
 
 | Model | Mechanic | Base ARPU/patient/yr | Anchor |
 |---|---|---|---|
-| A | Programmatic ads | ~$1.53 | A06b sessions × A06 CPM ($20-45) × fill/take-rate |
-| B | Fixed-fee sponsorship | ~$10.50 net ($15 gross) | GoodRx pharma-solutions proxy (`comparable_notes.md`) |
+| A | Programmatic ads | ≈$1.53 | A06b sessions × A06 CPM ($20-45) × fill/take-rate |
+| B | Fixed-fee sponsorship | ≈$10.50 net ($15 gross) | GoodRx pharma-solutions proxy (`comparable_notes.md`) |
 | C | Performance deals | Fails | Legal/steering risk; not recommended |
-| D | Employer/payer underwriting | ~$330 | A15 PEPM × A21 utilization (Lyra/Spring range) |
-| E | Foundation grants | ~$750 | Grant pool ÷ cohort (supplemental only) |
+| D | Employer/payer underwriting | ≈$330 | A15 PEPM × A21 utilization (Lyra/Spring range) |
+| E | Foundation grants | ≈$750 | Grant pool ÷ cohort (supplemental only) |
 
 **Margin target:** 25% contribution margin on fully loaded cost (A14). **Formula:** required funder revenue = fully loaded cost ÷ (1 − 0.25).
 
 ## The $1B question — reframed (eventual, not six months)
 
 ```
-Eventual target     ≈ $1B valuation  →  ~$100M/yr revenue at 10x (years, not this quarter)
-Core engine today   ≈ 3,000 actives × ~13 visits/yr × $153 ≈ $6M/yr FFS
-Core to ~$100M      ≈ ~50,000 actives at current utilization (~17x today's base)
+Eventual target     ≈ $1B valuation  →  ≈$100M/yr revenue at 10x (years, not this quarter)
+Core engine today   ≈ 3,000 actives × ≈13 visits/yr × $153 ≈ $6M/yr FFS
+Core to ≈$100M      ≈50,000 actives at current utilization (≈17x today's base)
 ```
 
-**Static mechanic-only backsolve** (if one stream carried the whole company): ads ~65M patients; sponsorship ~9.5M + ~400 sponsors; underwriting ~303K covered lives. See Excel tab `04_Path_to_1B`.
+**Static mechanic-only backsolve** (if one stream carried the whole company): ads ≈65M patients; sponsorship ≈9.5M + ≈400 sponsors; underwriting ≈303K covered lives. See Excel tab `04_Path_to_1B`.
 
 **Company-level contribution as Legion grows** (the more honest frame):
 
 | Total actives | Core FFS | Sponsor @ $10.50 (15K free-path at 50K co.) | Sponsor @ $100 WTP | Ads @ $1.53 |
 |---|---|---|---|---|
-| 3K (today) | ~$6M | ~$5K | ~$50K | ~$1K |
-| 50K (~$100M co.) | ~$99M | ~$158K (0.16%) | ~$1.5M (1.5%) | ~$23K (&lt;0.1%) |
+| 3K (today) | ≈$6M | ≈$5K | ≈$50K | ≈$1K |
+| 50K (≈$100M co.) | ≈$99M | ≈$158K (0.16%) | ≈$1.5M (1.5%) | ≈$23K (&lt;0.1%) |
 
 Detail and assumptions: `growth_contribution_analysis.md`.
 
-**Conclusion:** Growth does not rescue ads (per-patient gap ~50x). Sponsorship can grow linearly but caps at ~1–2% of a $100M company unless WTP far exceeds the GoodRx anchor. **Core FFS + AI margin expansion + optional underwriting** is the eventual $1B path.
+**Conclusion:** Growth does not rescue ads (per-patient gap ≈50x). Sponsorship can grow linearly but caps at ≈1–2% of a $100M company unless WTP far exceeds the GoodRx anchor. **Core FFS + AI margin expansion + optional underwriting** is the eventual $1B path.
 
 ## Decision tree (how to follow the logic)
 
@@ -88,17 +88,17 @@ Detail and assumptions: `growth_contribution_analysis.md`.
 
 | Tier | Population | Estimate | Source |
 |---|---|---|---|
-| T0 | All uninsured (US) | ~27.5M (8.2%) | P01, P04 |
-| T1 | Uninsured working-age 19–64 | ~22–23M (11.3%) | P01, P03, P05 |
-| T2 | Uninsured adults with AMI | ~5.9M | P06 |
-| T3 | Uninsured AMI receiving MH care/yr | ~1.5M | P06, P07 |
-| T4 | Legion reachable (A13 base) | 150K (~2.5% of T2) | Analyst; `data/uninsured_population_sizing.md` |
+| T0 | All uninsured (US) | ≈27.5M (8.2%) | P01, P04 |
+| T1 | Uninsured working-age 19–64 | ≈22–23M (11.3%) | P01, P03, P05 |
+| T2 | Uninsured adults with AMI | ≈5.9M | P06 |
+| T3 | Uninsured AMI receiving MH care/yr | ≈1.5M | P06, P07 |
+| T4 | Legion reachable (A13 base) | 150K (≈2.5% of T2) | Analyst; `data/uninsured_population_sizing.md` |
 
 ## What would flip the recommendation
 
-**Toward full stop:** buyer WTP clusters at EAP floor (~$36/patient/yr); patient trust test fails guardrails; counsel finds unavoidable AKS/CPOM exposure; audited costs come in at/above old external benchmarks.
+**Toward full stop:** buyer WTP clusters at EAP floor (≈$36/patient/yr); patient trust test fails guardrails; counsel finds unavoidable AKS/CPOM exposure; audited costs come in at/above old external benchmarks.
 
-**Toward sponsorship as co-funder:** sponsor WTP > ~$100/patient/yr in interviews AND episode cost stays < ~$75 (cost half already met at ~$8).
+**Toward sponsorship as co-funder:** sponsor WTP > ≈$100/patient/yr in interviews AND episode cost stays < ≈$75 (cost half already met at ≈$8).
 
 **Toward hard GO on underwriting:** commercial + patient gates pass; median qualified buyer WTP above model threshold; ≥1 paid design partner.
 

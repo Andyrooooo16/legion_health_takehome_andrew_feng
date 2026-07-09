@@ -6,7 +6,7 @@ Office of the Founders take-home · July 2026
 
 ## Answer in one line
 
-For a **new uninsured-only pipeline** (0 of ~3,000 actives today are uninsured; core FFS unchanged), ads and sponsorship cannot fully fund free care (~**2%** and ~**13%** of break-even on the cheapest AI pathway) — but a **$10–25K test** can falsify whether sponsorship works as a co-funder before Legion acquires uninsured patients at scale.
+For a **new uninsured-only pipeline** (0 of ≈3,000 actives today are uninsured; core FFS unchanged), ads and sponsorship cannot fully fund free care (**≈2%** and **≈13%** of break-even on the cheapest AI pathway) — but a **$10–25K test** can falsify whether sponsorship works as a co-funder before Legion acquires uninsured patients at scale.
 
 ---
 
@@ -31,13 +31,13 @@ These are the load-bearing assumptions. Challenge any of these first — full le
 
 | # | Assumption | What I used |
 |---|------------|-------------|
-| **Scope** | "Free care" = new **uninsured** patients on a mostly-AI pathway — not Legion's existing reimbursed book | 0 of ~3,000 actives uninsured today |
-| **Costs** | Legion's per-visit/episode economics | $74 sync visit · $37 AI-supported · ~$8 AI episode · 5.3 visits/patient/yr |
-| **Revenue** | Core FFS today | ~$153/visit · ~3,000 actives · ~$6M/yr |
-| **Sponsorship** | Industry anchor for fixed-fee sponsor ARPU | ~$10.50/patient/yr net (GoodRx proxy) — covers ~13% of AI-pathway break-even |
-| **Ads** | Patient-vertical CPM + engagement placeholder | ~$1.53/patient/yr — covers ~2% of break-even |
-| **Employer underwriting** | PEPM range from comparables | $600/yr base × 55% utilization → ~$330/patient/yr (clears AI-pathway break-even) |
-| **Population** | Reachable uninsured AMI cohort (not all Americans) | ~5.9M nationally; model uses 25K / 150K / 750K capture scenarios |
+| **Scope** | "Free care" = new **uninsured** patients on a mostly-AI pathway — not Legion's existing reimbursed book | 0 of ≈3,000 actives uninsured today |
+| **Costs** | Legion's per-visit/episode economics | $74 sync visit · $37 AI-supported · ≈$8 AI episode · 5.3 visits/patient/yr |
+| **Revenue** | Core FFS today | ≈$153/visit · ≈3,000 actives · ≈$6M/yr |
+| **Sponsorship** | Industry anchor for fixed-fee sponsor ARPU | ≈$10.50/patient/yr net (GoodRx proxy) — covers ≈13% of AI-pathway break-even |
+| **Ads** | Patient-vertical CPM + engagement placeholder | ≈$1.53/patient/yr — covers ≈2% of break-even |
+| **Employer underwriting** | PEPM range from comparables | $600/yr base × 55% utilization → ≈$330/patient/yr (clears AI-pathway break-even) |
+| **Population** | Reachable uninsured AMI cohort (not all Americans) | ≈5.9M nationally; model uses 25K / 150K / 750K capture scenarios |
 | **Still open** | Trust impact, AI-pathway cadence, sponsor WTP | Placeholders — testable in the 30-day plan |
 
 **What would flip the answer:** [`assumptions_summary.md`](deliverables/assumptions_summary.md)

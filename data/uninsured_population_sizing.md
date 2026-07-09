@@ -10,15 +10,15 @@
 
 | Population | Uninsured count | Rate | Source ID |
 |---|---|---|---|
-| All ages (civilian, noninstitutionalized) | **~27.5 million** | **8.2%** | P01, P04 |
-| Under age 65 | **~26.7 million** | **9.8%** | P03 |
-| Adults 19–64 (working age) | **~22–23 million** | **11.3%** | P01, P03 |
-| Adults 18–64 | **~23.1 million** | **11.6%** | P05 |
-| Children under 19 | **~4–5 million** | **5.9%** | P03 |
+| All ages (civilian, noninstitutionalized) | **≈27.5 million** | **8.2%** | P01, P04 |
+| Under age 65 | **≈26.7 million** | **9.8%** | P03 |
+| Adults 19–64 (working age) | **≈22–23 million** | **11.3%** | P01, P03 |
+| Adults 18–64 | **≈23.1 million** | **11.6%** | P05 |
+| Children under 19 | **≈4–5 million** | **5.9%** | P03 |
 
-**Methodology note:** ACS and NHIS report **point-in-time** uninsured; CPS ASEC reports **uninsured all calendar year** (2024: **8.0%**, ~28M — P02). This analysis uses **ACS point-in-time** as the primary anchor because it matches standard market-sizing practice and KFF's under-65 analysis.
+**Methodology note:** ACS and NHIS report **point-in-time** uninsured; CPS ASEC reports **uninsured all calendar year** (2024: **8.0%**, ≈28M — P02). This analysis uses **ACS point-in-time** as the primary anchor because it matches standard market-sizing practice and KFF's under-65 analysis.
 
-**Derivation (working-age adults 19–64):** KFF reports 26.7M uninsured under 65 at 9.8%; children under 19 at 5.9% uninsured → ~4.4M uninsured children → **~22.3M uninsured adults 19–64** (residual). Cross-check: NHIS 23.1M adults 18–64 uninsured (P05).
+**Derivation (working-age adults 19–64):** KFF reports 26.7M uninsured under 65 at 9.8%; children under 19 at 5.9% uninsured → ≈4.4M uninsured children → **≈22.3M uninsured adults 19–64** (residual). Cross-check: NHIS 23.1M adults 18–64 uninsured (P05).
 
 ---
 
@@ -28,16 +28,16 @@ Legion is **adult psychiatry telehealth**. Narrow from total uninsured using **S
 
 | Tier | Definition | 2024 estimate | Source |
 |---|---|---|---|
-| **T1** | Uninsured working-age adults (19–64) | **~22–23M** | P01, P03, P05 |
-| **T2** | Uninsured adults 18+ with **any mental illness (AMI)** | **~5.9M** | P06 |
-| **T3** | Uninsured adults 18+ with **serious mental illness (SMI)** | **~1.6M** | P06 |
-| **T4** | Uninsured adults with AMI who received MH treatment (past year) | **~1.5M** | P06, P07 |
+| **T1** | Uninsured working-age adults (19–64) | **≈22–23M** | P01, P03, P05 |
+| **T2** | Uninsured adults 18+ with **any mental illness (AMI)** | **≈5.9M** | P06 |
+| **T3** | Uninsured adults 18+ with **serious mental illness (SMI)** | **≈1.6M** | P06 |
+| **T4** | Uninsured adults with AMI who received MH treatment (past year) | **≈1.5M** | P06, P07 |
 
-**T2 cross-check:** 23.4% AMI prevalence among adults 18+ (P07) × ~23M uninsured adults ≈ **5.4M** — consistent with 5.9M (NSDUH uses model-based AMI classification; categories are non-mutually-exclusive for insurance type).
+**T2 cross-check:** 23.4% AMI prevalence among adults 18+ (P07) × ≈23M uninsured adults ≈ **5.4M** — consistent with 5.9M (NSDUH uses model-based AMI classification; categories are non-mutually-exclusive for insurance type).
 
 **T4 calculation:** 5.9M uninsured with AMI × **24.7%** treatment rate (P06, 2024) ≈ **1.46M**.
 
-**Caveat (P07):** NSDUH changed mental-health treatment question wording in 2024; treatment-rate comparisons to prior years are not directly comparable. KFF cites ~37% treatment among uninsured with any mental illness in 2023 Medicaid-comparison analysis — use **25–37%** as a sensitivity band, not a single point.
+**Caveat (P07):** NSDUH changed mental-health treatment question wording in 2024; treatment-rate comparisons to prior years are not directly comparable. KFF cites ≈37% treatment among uninsured with any mental illness in 2023 Medicaid-comparison analysis — use **25–37%** as a sensitivity band, not a single point.
 
 ---
 
@@ -45,13 +45,13 @@ Legion is **adult psychiatry telehealth**. Narrow from total uninsured using **S
 
 Model row **A13** (eligible free-pathway population) is **not** total US uninsured. It is Legion's **reachable uninsured AMI cohort** over 1–3 years:
 
-| A13 scenario | Patients | % of T2 (~5.9M uninsured AMI) | Interpretation |
+| A13 scenario | Patients | % of T2 (≈5.9M uninsured AMI) | Interpretation |
 |---|---|---|---|
-| **Low** | 25,000 | ~0.4% | Pilot / single-region launch |
-| **Base** | 150,000 | ~2.5% | Moderate national telepsychiatry capture |
-| **High** | 750,000 | ~12.7% | Aggressive uninsured AMI penetration |
+| **Low** | 25,000 | ≈0.4% | Pilot / single-region launch |
+| **Base** | 150,000 | ≈2.5% | Moderate national telepsychiatry capture |
+| **High** | 750,000 | ≈12.7% | Aggressive uninsured AMI penetration |
 
-**Today's anchor:** ~3,000 active patients (Legion data), **0 uninsured** (Legion confirmed 2026-07-09). Uninsured pathway is **100% incremental greenfield** — no overlap with current FFS book.
+**Today's anchor:** ≈3,000 active patients (Legion data), **0 uninsured** (Legion confirmed 2026-07-09). Uninsured pathway is **100% incremental greenfield** — no overlap with current FFS book.
 
 **Still open:** expected uninsured volume at 6–12 months; states Legion prioritizes; whether uninsured receive sync visits vs. AI-only continuity.
 
@@ -59,17 +59,17 @@ Model row **A13** (eligible free-pathway population) is **not** total US uninsur
 
 ## 4. Uninsured-only economics (why opportunity cost differs)
 
-For **insured** patients, sponsoring a reimbursable visit forgoes **~$153 revenue** and **~$79 gross profit** per visit. For **uninsured** patients, the relevant bar is **delivery COGS only**:
+For **insured** patients, sponsoring a reimbursable visit forgoes **≈$153 revenue** and **≈$79 gross profit** per visit. For **uninsured** patients, the relevant bar is **delivery COGS only**:
 
-| Care event | Variable cost (Legion data) | Base sponsorship (~$10.50/patient/yr) | Base ads (~$1.53/patient/yr) |
+| Care event | Variable cost (Legion data) | Base sponsorship (≈$10.50/patient/yr) | Base ads (≈$1.53/patient/yr) |
 |---|---|---|---|
-| AI continuity episode | **~$8/episode** (~$48/yr @ 6/yr) | ~13% of ~$78/yr break-even | Fails |
-| AI-leveraged sync visit | **~$37/visit** | Fails unless per-visit priced | Fails |
-| Full sync visit | **~$74/visit** | Fails unless per-visit priced | Fails |
+| AI continuity episode | **≈$8/episode** (≈$48/yr @ 6/yr) | ≈13% of ≈$78/yr break-even | Fails |
+| AI-leveraged sync visit | **≈$37/visit** | Fails unless per-visit priced | Fails |
+| Full sync visit | **≈$74/visit** | Fails unless per-visit priced | Fails |
 
-At **A13 base (150K uninsured pathway patients)** with AI continuity costing ~$48/yr:
+At **A13 base (150K uninsured pathway patients)** with AI continuity costing ≈$48/yr:
 - Care delivery ≈ **$7.2M/yr**
-- Sponsorship @ $10.50 ≈ **$1.6M/yr** (~17% of delivery cost — better than insured-replacement frame, still not full funding)
+- Sponsorship @ $10.50 ≈ **$1.6M/yr** (≈17% of delivery cost — better than insured-replacement frame, still not full funding)
 - Ads @ $1.53 ≈ **$230K/yr**
 
 ---

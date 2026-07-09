@@ -2,7 +2,7 @@
 
 **Purpose:** A deeper read on what could go wrong if Legion pursues ads, sponsorship, or underwriting for a new uninsured-only pipeline. Deck slides 6–7 summarize the decision tree and contagion math; this document is the full map.
 
-**Scope reminder:** ~3,000 actives today are insured. This analysis is about a **greenfield uninsured pipeline** — but several risks spill over into the core business anyway.
+**Scope reminder:** ≈3,000 actives today are insured. This analysis is about a **greenfield uninsured pipeline** — but several risks spill over into the core business anyway.
 
 ---
 
@@ -23,15 +23,15 @@ Each risk includes: **mechanism** (how it happens), **early signal** (what to wa
 
 ### 1.1 Employer underwriting rests on two unvalidated inputs (Structural — #1 and #2 model sensitivities)
 
-**Mechanism:** Model D's positive case ($330/patient/yr, ~+$243 margin) is `PEPM willingness to pay × utilization rate`. Both are external placeholders — not Legion pilot data. If employers offer Lyra-style platform pricing but only for a narrow AI psychiatry slice (not full EAP), or if utilization is 30% instead of 55%, revenue falls below break-even with no change in care cost.
+**Mechanism:** Model D's positive case ($330/patient/yr, ≈+$243 margin) is `PEPM willingness to pay × utilization rate`. Both are external placeholders — not Legion pilot data. If employers offer Lyra-style platform pricing but only for a narrow AI psychiatry slice (not full EAP), or if utilization is 30% instead of 55%, revenue falls below break-even with no change in care cost.
 
 **Early signal:** Buyer interviews cluster below $50/employee/month *for this product shape*, or procurement contacts say utilization historically runs 20–35% for single-condition digital benefits.
 
-**Guardrail:** Pre-registered WTP floor (~$36/patient/yr). Kill if Model D ARPU falls below break-even even at "reasonable" PEPM. Probe utilization explicitly in interviews (see `sponsor_test_package.md` §3.1).
+**Guardrail:** Pre-registered WTP floor (≈$36/patient/yr). Kill if Model D ARPU falls below break-even even at "reasonable" PEPM. Probe utilization explicitly in interviews (see `sponsor_test_package.md` §3.1).
 
 ### 1.2 Pathway mix drift — AI-only vs. clinician-heavy (Structural)
 
-**Mechanism:** Economics assume a mostly-AI uninsured pathway (~$8/episode, break-even ~$79–167/yr). Uninsured patients with active mental illness may need more synchronous psychiatric visits than modeled. Clinician-heavy pathways need **$538+/patient/yr** — only employer/foundation-scale funders clear that bar; ads and sponsorship cannot.
+**Mechanism:** Economics assume a mostly-AI uninsured pathway (≈$8/episode, break-even ≈$79–167/yr). Uninsured patients with active mental illness may need more synchronous psychiatric visits than modeled. Clinician-heavy pathways need **$538+/patient/yr** — only employer/foundation-scale funders clear that bar; ads and sponsorship cannot.
 
 **Early signal:** Clinical advisors flag that uninsured AMI population skews higher acuity; intake data from early cohort shows >50% escalating to sync within 90 days.
 
@@ -39,15 +39,15 @@ Each risk includes: **mechanism** (how it happens), **early signal** (what to wa
 
 ### 1.3 Trust churn is modeled on sponsor-tier revenue only (Structural)
 
-**Mechanism:** The model's trust cost formula charges trust damage against sponsor/employer ARPU. The larger downside is **contagion to Legion's existing insured book** (~$6M/yr core FFS): if sponsor branding makes paying patients question clinical independence, the loss dwarf sponsor revenue. Model v3 added a core-book contagion placeholder (A25/A26) but inputs are unresolved.
+**Mechanism:** The model's trust cost formula charges trust damage against sponsor/employer ARPU. The larger downside is **contagion to Legion's existing insured book** (≈$6M/yr core FFS): if sponsor branding makes paying patients question clinical independence, the loss dwarf sponsor revenue. Model v3 added a core-book contagion placeholder (A25/A26) but inputs are unresolved.
 
 **Quantified scenario (Legion data, deck slide 7):**
 
 | Scenario | Calculation | Core FFS loss | Brand sponsor rev @ 15K uninsured ($10.50/yr) | Net |
 |---|---|---|---|---|
-| 2% churn · avg patient | 2% × 3,000 × $811 | **~$49K/yr** | ~$158K/yr | +$109K |
-| 2% churn · mature cohort | 2% × 3,000 × $2,025 | **~$122K/yr** | ~$158K/yr | +$36K (thin) |
-| 5% churn · mature cohort | 5% × 3,000 × $2,025 | **~$304K/yr** | ~$158K/yr | **−$146K** |
+| 2% churn · avg patient | 2% × 3,000 × $811 | **≈$49K/yr** | ≈$158K/yr | +$109K |
+| 2% churn · mature cohort | 2% × 3,000 × $2,025 | **≈$122K/yr** | ≈$158K/yr | +$36K (thin) |
+| 5% churn · mature cohort | 5% × 3,000 × $2,025 | **≈$304K/yr** | ≈$158K/yr | **−$146K** |
 
 **Rule:** Sponsor revenue on the uninsured pipeline must exceed core-book spillover loss.
 
@@ -57,7 +57,7 @@ Each risk includes: **mechanism** (how it happens), **early signal** (what to wa
 
 ### 1.4 Free care as CAC may not convert (Execution)
 
-**Mechanism:** The upside case (~$8/episode vs $250 CAC) requires ~3.2% free-to-paid conversion to break even on acquisition economics. Uninsured free users may convert to paid insurance coverage at different rates than general DTC — or may never convert if they remain uninsured.
+**Mechanism:** The upside case (≈$8/episode vs $250 CAC) requires ≈3.2% free-to-paid conversion to break even on acquisition economics. Uninsured free users may convert to paid insurance coverage at different rates than general DTC — or may never convert if they remain uninsured.
 
 **Early signal:** Conversion tracking on any pilot cohort shows <1% insured conversion at 90 days.
 
@@ -65,7 +65,7 @@ Each risk includes: **mechanism** (how it happens), **early signal** (what to wa
 
 ### 1.5 Scale requirements are unrealistic for niche positioning (Structural)
 
-**Mechanism:** Even Model D's favorable backsolve implies ~303K underwritten patients for a $1B revenue story at 10× multiple — ~100× today's actives. Employer contracts at that scale require an enterprise sales machine, capital, and product breadth (Lyra/Spring Health raised $1B+ over years) that a narrow AI psychiatry episode product may not command.
+**Mechanism:** Even Model D's favorable backsolve implies ≈303K underwritten patients for a $1B revenue story at 10× multiple — ≈100× today's actives. Employer contracts at that scale require an enterprise sales machine, capital, and product breadth (Lyra/Spring Health raised $1B+ over years) that a narrow AI psychiatry episode product may not command.
 
 **Early signal:** Buyers say they'd pilot 500–2,000 lives, not 50K+; sales cycle estimates exceed 12 months.
 
@@ -101,7 +101,7 @@ Each risk includes: **mechanism** (how it happens), **early signal** (what to wa
 
 ### 2.4 Corporate practice of medicine (Existential in strict states)
 
-**Mechanism:** If sponsorship gives funders influence over which patients receive care, which clinicians deliver it, or treatment protocols, CPOM risk compounds in ~16 strict states. Distinct from AKS — can exist even when economics work.
+**Mechanism:** If sponsorship gives funders influence over which patients receive care, which clinicians deliver it, or treatment protocols, CPOM risk compounds in ≈16 strict states. Distinct from AKS — can exist even when economics work.
 
 **Early signal:** Sponsor contract includes clinical KPIs, formulary preferences, or staffing input.
 
@@ -193,7 +193,7 @@ Each risk includes: **mechanism** (how it happens), **early signal** (what to wa
 
 ### 5.1 Opportunity cost vs. core FFS (Structural — Gate 5)
 
-**Mechanism:** Legion's proven engine is reimbursed visits (~$6M, ~76% GM on leveraged AI). Founder days on sponsor buyer interviews are not delegable at validation stage. Same time on payer expansion or reimbursement categories moves **known-margin** revenue.
+**Mechanism:** Legion's proven engine is reimbursed visits (≈$6M, ≈76% GM on leveraged AI). Founder days on sponsor buyer interviews are not delegable at validation stage. Same time on payer expansion or reimbursement categories moves **known-margin** revenue.
 
 **Early signal:** Reimbursement opportunities delayed; core growth metrics flat during sponsor pursuit.
 
@@ -288,7 +288,7 @@ Pharma sponsor + education content ───────────────
 
 Stop or redesign if **any one** fires:
 
-- Employer/sponsor WTP below floor (~$36/patient/yr; sponsorship co-funder needs >$100)
+- Employer/sponsor WTP below floor (≈$36/patient/yr; sponsorship co-funder needs >$100)
 - Patient trust drop >0.25 or continuation drop >5pp (or core-book contagion above A26 limit)
 - Counsel finds unavoidable AKS/CPOM exposure or required data sharing with funders
 - Utilization evidence pushes Model D below break-even

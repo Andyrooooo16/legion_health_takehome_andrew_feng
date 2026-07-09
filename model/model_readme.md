@@ -37,7 +37,7 @@ Edit `assumptions.csv` and rerun the scripts above to refresh all outputs.
 
 ## Data sources
 
-**From Legion:** A01 ($74/visit), A02 ($37/visit), A02b (~$8/episode fully loaded), A03 (5.3 visits/yr base / 13.2 high), A25 ($811–$2,025 revenue exposure), A28 (CAC $250), A29/A30 (LTV:CAC ratios). See `data/ceo_data_integration.md`.
+**From Legion:** A01 ($74/visit), A02 ($37/visit), A02b (≈$8/episode fully loaded), A03 (5.3 visits/yr base / 13.2 high), A25 ($811–$2,025 revenue exposure), A28 (CAC $250), A29/A30 (LTV:CAC ratios). See `data/ceo_data_integration.md`.
 
 **Still estimated:** A03b/A04 (AI pathway cadence), A10/A11/A26 (trust impact), A15/A21 (employer PEPM), A05–A07 (sponsor-side), A13 range (reachable uninsured population).
 
@@ -51,11 +51,11 @@ Edit `assumptions.csv` and rerun the scripts above to refresh all outputs.
 
 Legion's costs are 58–74% below the external telehealth benchmarks used initially. Break-evens fell accordingly, but the qualitative conclusion holds: **only employer underwriting (Model D) and foundation grants (Model E) clear break-even at base case** on the AI-driven pathway. Ads (A) and fixed-fee sponsorship (B) remain far short.
 
-**Model D (employer PEPM):** $330 ARPU vs ~$79 break-even on AI-driven pathway → +$243 north star.
+**Model D (employer PEPM):** $330 ARPU vs ≈$79 break-even on AI-driven pathway → +$243 north star.
 
-**Model B (sponsorship):** $15 anchor covers ~19% of AI-driven break-even — worth testing as co-funder, not primary funder.
+**Model B (sponsorship):** $15 anchor covers ≈19% of AI-driven break-even — worth testing as co-funder, not primary funder.
 
-**Free care as acquisition:** ~$8 episode cost vs $250 CAC → break-even at ~3.2% free-to-paid conversion.
+**Free care as acquisition:** ≈$8 episode cost vs $250 CAC → break-even at ≈3.2% free-to-paid conversion.
 
 ## Known tension
 

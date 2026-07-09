@@ -24,7 +24,7 @@ Lotus private metrics (conversion, sponsor revenue, contracts) were treated as u
 
 Python implementation mirrored by an Excel workbook (`legion_sponsorship_model.xlsx`). Unit tests cover formula correctness and scenario ordering. Every input has low/base/high values with source notes in `assumptions.csv`.
 
-Legion's figures ($74/visit, $37 AI-supported, ~$8 AI episode, 5.3 visits/patient, $153/visit, CAC $250) are the cost basis. External benchmarks fill gaps where Legion data was not available (employer PEPM, sponsor ARPU, ad CPMs).
+Legion's figures ($74/visit, $37 AI-supported, ≈$8 AI episode, 5.3 visits/patient, $153/visit, CAC $250) are the cost basis. External benchmarks fill gaps where Legion data was not available (employer PEPM, sponsor ARPU, ad CPMs).
 
 ## Proposed validation (not yet fielded)
 

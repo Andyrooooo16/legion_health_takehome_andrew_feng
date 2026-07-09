@@ -23,7 +23,7 @@ Patient-health-vertical CPMs of roughly $20-45 sell reach at scale (`comparable_
 
 We believe premium association and access, not reach, is the product, so a high-intent cohort of 1,000-5,000 eligible patients is sufficient inventory for a fee-for-benefit or access-underwriting deal.
 
-**KILL CONDITION:** if qualified buyers consistently require more than ~25,000 exposed patients before engaging, this value proposition fails and only the employer PEPM route (where the buyer funds its own population) remains.
+**KILL CONDITION:** if qualified buyers consistently require more than ≈25,000 exposed patients before engaging, this value proposition fails and only the employer PEPM route (where the buyer funds its own population) remains.
 
 ## Reporting Legion can safely provide
 

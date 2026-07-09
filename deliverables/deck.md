@@ -56,7 +56,7 @@ Table: ads, sponsorship, employer, foundation, insurance FFS with primary role a
 
 ## Slide 6 — Strategic contribution
 
-Illustrative revenue at 50K actives. Insurance ~99%. Sponsorship/ads limited direct contribution; acquisition upside noted separately.
+Illustrative revenue at 50K actives. Insurance ≈99%. Sponsorship/ads limited direct contribution; acquisition upside noted separately.
 
 ---
 
