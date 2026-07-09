@@ -35,7 +35,7 @@ Format: Question | Why it matters | Current assumption | Evidence needed | Owner
 
 * **Why:** H3; the patient gate. Psychiatry is a high sensitivity context.
 * **Current assumption:** Some negative impact possible; magnitude unknown (A10/A11/A26 placeholders in model).
-* **Evidence needed:** Randomized patient concept test; live survey at https://legion-take-home-assignment-1rhogocn3.vercel.app/ (built, not fielded at panel scale).
+* **Evidence needed:** Randomized patient concept test; live survey at https://legion-take-home-assignment.vercel.app/ (built, not fielded at panel scale).
 * **Owner:** Analyst | **Status:** Prototype deployed; fielding pending
 
 ## Q06: Which sponsor categories does Legion consider unacceptable?

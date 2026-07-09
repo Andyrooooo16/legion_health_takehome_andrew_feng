@@ -32,7 +32,7 @@
 
 ## Patient side — trust test (G3)
 
-**Kit:** `deliverables/experiment_spec.md` · **Live survey:** https://legion-take-home-assignment-1rhogocn3.vercel.app/
+**Kit:** `deliverables/experiment_spec.md` · **Live survey:** https://legion-take-home-assignment.vercel.app/
 
 | Step | Action | Target | Threshold |
 |---|---|---|---|

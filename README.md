@@ -10,6 +10,20 @@ For a **new uninsured-only pipeline** (0 of ≈3,000 actives today are uninsured
 
 ---
 
+## Start here (10 minutes)
+
+| # | Asset | What it is |
+|---|--------|------------|
+| 1 | [**Decision deck (live)**](https://andyrooooo16.github.io/legion_health_takehome_andrew_feng/deliverables/deck.html) · [source](deliverables/deck.html) | **Primary deliverable** — 9 slides (arrow keys to navigate) |
+| 2 | [`executive_summary.md`](deliverables/executive_summary.md) | One-page prose version |
+| 3 | [**Thinking pathway (live)**](https://andyrooooo16.github.io/legion_health_takehome_andrew_feng/deliverables/thinking_pathway.html) · [source](deliverables/thinking_pathway.html) | Logical flowchart of the analysis |
+| 4 | [`legion_sponsorship_model.xlsx`](model/legion_sponsorship_model.xlsx) | Editable model — tab `01_Assumptions` drives everything |
+| 5 | [**Live survey**](https://legion-take-home-assignment.vercel.app/) | Patient trust concept test prototype |
+
+> **HTML files on GitHub show source code, not the rendered page.** Use the live links above (GitHub Pages), or clone the repo and open the `.html` files locally in Chrome. Fixes: [Troubleshooting](#troubleshooting).
+
+---
+
 ## How I reached this answer
 
 | Step | What I did | Link |
@@ -22,8 +36,6 @@ For a **new uninsured-only pipeline** (0 of ≈3,000 actives today are uninsured
 | 6 | Designed sponsor and patient test kits | [`sponsor_test_package.md`](deliverables/sponsor_test_package.md) · [`experiment_spec.md`](deliverables/experiment_spec.md) |
 
 **Visual map:** [thinking pathway (live)](https://andyrooooo16.github.io/legion_health_takehome_andrew_feng/deliverables/thinking_pathway.html) — logical flowchart of the full analysis.
-
-> **HTML files on GitHub show source code, not the rendered page.** Use the live links below (GitHub Pages), or clone the repo and open the `.html` files locally in Chrome.
 
 ---
 
@@ -43,18 +55,6 @@ These are the load-bearing assumptions. Challenge any of these first — full le
 | **Still open** | Trust impact, AI-pathway cadence, sponsor WTP | Placeholders — testable in the 30-day plan |
 
 **What would flip the answer:** [`assumptions_summary.md`](deliverables/assumptions_summary.md)
-
----
-
-## Start here (10 minutes)
-
-| # | Asset | What it is |
-|---|--------|------------|
-| 1 | [**Decision deck (live)**](https://andyrooooo16.github.io/legion_health_takehome_andrew_feng/deliverables/deck.html) · [source](deliverables/deck.html) | **Primary deliverable** — 9 slides (arrow keys to navigate) |
-| 2 | [`executive_summary.md`](deliverables/executive_summary.md) | One-page prose version |
-| 3 | [**Thinking pathway (live)**](https://andyrooooo16.github.io/legion_health_takehome_andrew_feng/deliverables/thinking_pathway.html) · [source](deliverables/thinking_pathway.html) | Logical flowchart of the analysis |
-| 4 | [`legion_sponsorship_model.xlsx`](model/legion_sponsorship_model.xlsx) | Editable model — tab `01_Assumptions` drives everything |
-| 5 | [**Live survey**](https://legion-take-home-assignment-1rhogocn3.vercel.app/) | Patient trust concept test prototype |
 
 ---
 
@@ -175,7 +175,7 @@ cd app && npm install && npm run dev
 | Build fails with `Bus error` | Copy `app/` to a local (non-network) folder, run `npm install && npm run build` there. See [`app/prototype_readme.md`](app/prototype_readme.md). |
 | Stuck on one survey variant while testing | Open an incognito window, or clear this site's localStorage in browser devtools. |
 
-**Deployed version (no local setup):** https://legion-take-home-assignment-1rhogocn3.vercel.app/
+**Deployed version (no local setup):** https://legion-take-home-assignment.vercel.app/
 
 ---
 

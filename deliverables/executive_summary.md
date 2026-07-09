@@ -4,7 +4,7 @@
 
 ## What Legion should do
 
-Do **not** replace Legion's reimbursed FFS model. **None of ≈3,000 actives today are uninsured** — this analysis scopes ads/sponsorship to a **new incremental uninsured pipeline**. National TAM: ≈5.9M uninsured adults with mental illness (Census/NSDUH). Run ≈$10–25K validation **before** building that pipeline: sponsor WTP interviews + patient trust survey. Legion's operating data is integrated into the model. Survey: https://legion-take-home-assignment-1rhogocn3.vercel.app/
+Do **not** replace Legion's reimbursed FFS model. **None of ≈3,000 actives today are uninsured** — this analysis scopes ads/sponsorship to a **new incremental uninsured pipeline**. National TAM: ≈5.9M uninsured adults with mental illness (Census/NSDUH). Run ≈$10–25K validation **before** building that pipeline: sponsor WTP interviews + patient trust survey. Legion's operating data is integrated into the model. Survey: https://legion-take-home-assignment.vercel.app/
 
 ## What Legion should not do
 
