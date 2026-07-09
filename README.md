@@ -18,7 +18,7 @@ For a **new uninsured-only pipeline** (0 of ≈3,000 actives today are uninsured
 | 2 | [`executive_summary.md`](deliverables/executive_summary.md) | One-page prose version |
 | 3 | [**Thinking pathway (live)**](https://andyrooooo16.github.io/legion_health_takehome_andrew_feng/deliverables/thinking_pathway.html) · [source](deliverables/thinking_pathway.html) | Logical flowchart of the analysis |
 | 4 | [`legion_sponsorship_model.xlsx`](model/legion_sponsorship_model.xlsx) | Editable model — tab `01_Assumptions` drives everything |
-| 5 | [**Live survey**](https://legion-take-home-assignment.vercel.app/) | Patient trust concept test prototype |
+| 5 | [**Live survey**](https://legion-take-home-assignment.vercel.app/) · [results dashboard](https://legion-take-home-assignment.vercel.app/admin) | Patient trust concept test prototype — [what it is and how it works](#prototype-app) |
 
 > **HTML files on GitHub show source code, not the rendered page.** Use the live links above (GitHub Pages), or clone the repo and open the `.html` files locally in Chrome. Fixes: [Troubleshooting](#troubleshooting).
 
@@ -107,11 +107,27 @@ legion_health_takehome_andrew_feng/
 
 ### Prototype (`app/`)
 
+**What it is:** a working research instrument — the patient-side concept test from [`experiment_spec.md`](deliverables/experiment_spec.md), built as a Next.js app. It exists because the recommendation hinges on an untested assumption: **do patients still trust free care when a sponsor's name is on it?** This is the tool that would produce that evidence; it is an instrument, not a result.
+
+**How it works:** each participant is randomized (sticky, equal allocation) into one of four arms — a no-sponsor control or one of three sponsor-funded framings — then walks one flow: intro/consent → concept exposure → behavioral choice → trust survey with a disclosure-comprehension check. Results feed the pre-registered thresholds in the decision framework (proceed if trust declines ≤0.25 points and continuation intent ≤5pp vs. control).
+
+**What to look at:**
+
+| Where | What you'll see |
+|-------|-----------------|
+| [Live deployment](https://legion-take-home-assignment.vercel.app/) | The participant flow, exactly as a respondent would see it |
+| Live `/admin` ([link](https://legion-take-home-assignment.vercel.app/admin)) | Results dashboard — pass / fail / inconclusive per metric per arm |
+| Synthetic data banner on `/admin` | Dashboard ships seeded with **360 fabricated records** (90/arm) so the analysis is inspectable before fielding — clearly labeled, toggleable, and not a forecast |
+
+No real patient data is collected; runs fully offline (localStorage) with optional PostHog wiring for a real field test.
+
+**Run locally:**
+
 ```bash
 cd app && npm install && npm run dev
 ```
 
-Then open http://localhost:3000. Details: [`app/prototype_readme.md`](app/prototype_readme.md).
+Then open http://localhost:3000. Architecture, known limitations, and spec-gap flags: [`app/prototype_readme.md`](app/prototype_readme.md).
 
 ---
 
