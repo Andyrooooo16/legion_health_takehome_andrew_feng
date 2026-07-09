@@ -56,10 +56,6 @@ These are the load-bearing assumptions. Challenge any of these first — full le
 | 4 | [`legion_sponsorship_model.xlsx`](model/legion_sponsorship_model.xlsx) | Editable model — tab `01_Assumptions` drives everything |
 | 5 | [**Live survey**](https://legion-take-home-assignment-1rhogocn3.vercel.app/) | Patient trust concept test prototype |
 
-**GitHub Pages (recommended):** Repo → **Settings** → **Pages** → Source: **Deploy from a branch** → Branch: **main** → Folder: **/ (root)** → **Save**. Wait 1–2 minutes, then use the live links above.
-
-> If you use **GitHub Actions** instead and the workflow fails on `configure-pages`, switch to **Deploy from a branch** (above) — it works the same for static HTML and does not need Actions.
-
 ---
 
 ## Go deeper
