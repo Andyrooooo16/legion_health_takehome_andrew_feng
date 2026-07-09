@@ -21,7 +21,9 @@ For a **new uninsured-only pipeline** (0 of ≈3,000 actives today are uninsured
 | 5 | Documented open questions and validation plan | [`open_questions.md`](deliverables/open_questions.md) · [`30_day_plan.md`](deliverables/30_day_plan.md) |
 | 6 | Designed sponsor and patient test kits | [`sponsor_test_package.md`](deliverables/sponsor_test_package.md) · [`experiment_spec.md`](deliverables/experiment_spec.md) |
 
-**Visual map:** [`thinking_pathway.html`](deliverables/thinking_pathway.html) — logical flowchart of the full analysis (open in browser).
+**Visual map:** [thinking pathway (live)](https://andyrooooo16.github.io/legion_health_takehome_andrew_feng/deliverables/thinking_pathway.html) — logical flowchart of the full analysis.
+
+> **HTML files on GitHub show source code, not the rendered page.** Use the live links below (GitHub Pages), or clone the repo and open the `.html` files locally in Chrome.
 
 ---
 
@@ -48,11 +50,13 @@ These are the load-bearing assumptions. Challenge any of these first — full le
 
 | # | Asset | What it is |
 |---|--------|------------|
-| 1 | [`deliverables/deck.html`](deliverables/deck.html) | **Primary deliverable** — 9-slide decision deck (open in browser; arrow keys) |
-| 2 | [`deliverables/executive_summary.md`](deliverables/executive_summary.md) | One-page prose version |
-| 3 | [`deliverables/thinking_pathway.html`](deliverables/thinking_pathway.html) | Logical flowchart of the analysis |
-| 4 | [`model/legion_sponsorship_model.xlsx`](model/legion_sponsorship_model.xlsx) | Editable model — tab `01_Assumptions` drives everything |
-| 5 | **Live survey** | https://legion-take-home-assignment-1rhogocn3.vercel.app/ |
+| 1 | [**Decision deck (live)**](https://andyrooooo16.github.io/legion_health_takehome_andrew_feng/deliverables/deck.html) · [source](deliverables/deck.html) | **Primary deliverable** — 9 slides (arrow keys to navigate) |
+| 2 | [`executive_summary.md`](deliverables/executive_summary.md) | One-page prose version |
+| 3 | [**Thinking pathway (live)**](https://andyrooooo16.github.io/legion_health_takehome_andrew_feng/deliverables/thinking_pathway.html) · [source](deliverables/thinking_pathway.html) | Logical flowchart of the analysis |
+| 4 | [`legion_sponsorship_model.xlsx`](model/legion_sponsorship_model.xlsx) | Editable model — tab `01_Assumptions` drives everything |
+| 5 | [**Live survey**](https://legion-take-home-assignment-1rhogocn3.vercel.app/) | Patient trust concept test prototype |
+
+**GitHub Pages (one-time setup):** Repo → **Settings** → **Pages** → Build type: **GitHub Actions**. Pushing to `main` deploys the live links above automatically.
 
 ---
 
@@ -108,6 +112,71 @@ legion_health_takehome_andrew_feng/
 ```bash
 cd app && npm install && npm run dev
 ```
+
+Then open http://localhost:3000. Details: [`app/prototype_readme.md`](app/prototype_readme.md).
+
+---
+
+## Troubleshooting
+
+### HTML deck or thinking pathway won't display correctly
+
+**On GitHub:** Clicking `deck.html` or `thinking_pathway.html` in the repo shows raw HTML source. Use the [**live links**](https://andyrooooo16.github.io/legion_health_takehome_andrew_feng/deliverables/deck.html) above instead.
+
+**After cloning locally:**
+
+```bash
+git clone https://github.com/Andyrooooo16/legion_health_takehome_andrew_feng.git
+cd legion_health_takehome_andrew_feng
+open deliverables/deck.html          # macOS — opens in your default browser
+# or: open -a "Google Chrome" deliverables/deck.html
+```
+
+On Windows: right-click `deliverables/deck.html` → **Open with** → Chrome. On Linux: `xdg-open deliverables/deck.html`.
+
+| Problem | Fix |
+|---------|-----|
+| Page is blank or unstyled | Both HTML files load **Inter** from Google Fonts. Connect to the internet and refresh. |
+| Deck won't advance | Click the slide area first, then use **← / →** arrow keys (not scroll). |
+| Live GitHub Pages link 404 | Repo → **Settings** → **Pages** → Source: **GitHub Actions** → push to `main` → wait for the Actions workflow to finish. |
+| Prefer a local server | `python3 -m http.server 8080` from the repo root → open http://localhost:8080/deliverables/deck.html |
+
+### Excel model (`legion_sponsorship_model.xlsx`)
+
+| Problem | Fix |
+|---------|-----|
+| File won't open | Use Excel, Google Sheets (upload), or LibreOffice Calc. |
+| Tabs show old numbers | Edit assumptions on **`01_Assumptions`** only; downstream tabs recalculate automatically. In Excel: **Formulas → Calculate Now** if needed. |
+| Want to verify Python output | See **Python model** below — optional; the Excel file is the primary editable model. |
+
+### Python model (`model/`) — optional
+
+```bash
+cd model
+python3 scenarios.py
+python3 sensitivity.py
+python3 -m pytest tests/test_model.py -v   # requires: pip install pytest
+```
+
+| Problem | Fix |
+|---------|-----|
+| `No module named pytest` | `pip install pytest` (or `pip3 install pytest`). |
+| Permission / environment errors on macOS | Use a venv: `python3 -m venv .venv && source .venv/bin/activate && pip install pytest` |
+
+### Survey prototype (`app/`)
+
+```bash
+cd app && npm install && npm run dev
+```
+
+| Problem | Fix |
+|---------|-----|
+| `npm: command not found` | Install [Node.js](https://nodejs.org/) (LTS, v18+). |
+| Port 3000 already in use | `npm run dev -- -p 3001` → open http://localhost:3001 |
+| Build fails with `Bus error` | Copy `app/` to a local (non-network) folder, run `npm install && npm run build` there. See [`app/prototype_readme.md`](app/prototype_readme.md). |
+| Stuck on one survey variant while testing | Open an incognito window, or clear this site's localStorage in browser devtools. |
+
+**Deployed version (no local setup):** https://legion-take-home-assignment-1rhogocn3.vercel.app/
 
 ---
 

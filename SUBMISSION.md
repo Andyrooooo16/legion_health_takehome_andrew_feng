@@ -1,5 +1,5 @@
 # Submission note
 
-**Start at [`README.md`](README.md)** — it has the answer, thinking path, key assumptions, 10-minute read order, and deep-dive links.
+**Start at [`README.md`](README.md)** — answer, assumptions, live links, and **troubleshooting** for local setup.
 
-This file exists only so anyone following the original assignment filename (`SUBMISSION.md`) lands in the right place.
+This file exists so anyone following the original assignment filename (`SUBMISSION.md`) lands in the right place.
