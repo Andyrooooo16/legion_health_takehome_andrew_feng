@@ -56,7 +56,9 @@ These are the load-bearing assumptions. Challenge any of these first — full le
 | 4 | [`legion_sponsorship_model.xlsx`](model/legion_sponsorship_model.xlsx) | Editable model — tab `01_Assumptions` drives everything |
 | 5 | [**Live survey**](https://legion-take-home-assignment-1rhogocn3.vercel.app/) | Patient trust concept test prototype |
 
-**GitHub Pages (one-time setup):** Repo → **Settings** → **Pages** → Build type: **GitHub Actions**. Pushing to `main` deploys the live links above automatically.
+**GitHub Pages (recommended):** Repo → **Settings** → **Pages** → Source: **Deploy from a branch** → Branch: **main** → Folder: **/ (root)** → **Save**. Wait 1–2 minutes, then use the live links above.
+
+> If you use **GitHub Actions** instead and the workflow fails on `configure-pages`, switch to **Deploy from a branch** (above) — it works the same for static HTML and does not need Actions.
 
 ---
 
@@ -138,7 +140,8 @@ On Windows: right-click `deliverables/deck.html` → **Open with** → Chrome. O
 |---------|-----|
 | Page is blank or unstyled | Both HTML files load **Inter** from Google Fonts. Connect to the internet and refresh. |
 | Deck won't advance | Click the slide area first, then use **← / →** arrow keys (not scroll). |
-| Live GitHub Pages link 404 | Repo → **Settings** → **Pages** → Source: **GitHub Actions** → push to `main` → wait for the Actions workflow to finish. |
+| Live GitHub Pages link 404 | **Settings** → **Pages** → Source: **Deploy from a branch** → **main** → **/ (root)** → Save. Wait 1–2 min. (Simpler than GitHub Actions for static HTML.) |
+| GitHub Actions deploy failed on `configure-pages` | Use **Deploy from a branch** instead (above). Or: **Settings** → **Environments** → **github-pages** → allow deployments from `main`, then re-run the workflow. |
 | Prefer a local server | `python3 -m http.server 8080` from the repo root → open http://localhost:8080/deliverables/deck.html |
 
 ### Excel model (`legion_sponsorship_model.xlsx`)
